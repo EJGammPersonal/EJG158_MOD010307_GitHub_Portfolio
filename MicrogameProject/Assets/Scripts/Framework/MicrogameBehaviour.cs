@@ -4,7 +4,7 @@ namespace MicrogameCourse.Framework
 
 
 
-    public abstract class MicrogameBehaviour
+    public abstract class MicrogameBehaviour : MonoBehaviour
     {
         //Microgame Session
         protected bool isRunning { get; private set; }
