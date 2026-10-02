@@ -2,6 +2,7 @@ using System;
 using System.Threading;
 using UnityEngine;
 using UnityEngine.UI;
+using TMPro;
 namespace MicrogameCourse.Framework
 {
     public sealed class MicrogameSession : MonoBehaviour
@@ -11,8 +12,8 @@ namespace MicrogameCourse.Framework
         [SerializeField] private GameObject readyPanel;
         [SerializeField] private GameObject resultsPanel;
         [SerializeField] private GameObject playArea;
-        [SerializeField] private Text timerText;
-        [SerializeField] private Text resultText;
+        [SerializeField] private TextMeshProUGUI timerText;
+        [SerializeField] private TextMeshProUGUI resultText;
         [SerializeField, Min(1f)] private float durationSeconds = 10f;
 
         private Phase currentPhase;

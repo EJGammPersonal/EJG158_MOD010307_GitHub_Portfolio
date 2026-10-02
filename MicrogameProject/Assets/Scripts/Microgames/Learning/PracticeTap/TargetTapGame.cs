@@ -1,4 +1,5 @@
 using MicrogameCourse.Framework;
+using TMPro;
 using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.UI;
@@ -9,7 +10,7 @@ namespace MicrogameCourse.Microgames
     {
     [SerializeField] private RectTransform playArea;
     [SerializeField] private RectTransform target;
-    [SerializeField] private Text progressText;
+    [SerializeField] private TextMeshProUGUI progressText;
     [SerializeField, Min (1)] private int tapsToWin = 5;
 
     private int tapsRemaining;
