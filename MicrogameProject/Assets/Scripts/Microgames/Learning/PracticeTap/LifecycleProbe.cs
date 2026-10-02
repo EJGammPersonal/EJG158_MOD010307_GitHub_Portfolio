@@ -1,16 +1,48 @@
 using UnityEngine;
 
-public class LifecycleProbe : MonoBehaviour
+namespace MicrogameCourse.Learning
 {
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
-    void Start()
+    public class LifecycleProbe : MonoBehaviour
     {
-        
-    }
+        private bool hasLoggedFirstUpdate;
 
-    // Update is called once per frame
-    void Update()
-    {
-        
+        private void Awake()
+        {
+            Log("Awake");
+        }
+
+        private void OnEnable()
+        {
+            Log("OnEnable");
+        }
+
+        private void Start()
+        {
+            Log("Start");
+        }
+
+        private void Update()
+        {
+            if (!hasLoggedFirstUpdate)
+            {
+                Log("first Update");
+            }
+        }
+
+        private void OnDisable()
+        {
+            Log("OnDisable");
+        }
+
+        private void OnDestroy()
+        {
+            Log("OnDestroy");
+        }
+
+        private void Log(string eventName)
+        {
+            Debug.Log($"[frame {Time.frameCount}] {gameObject.name}: {eventName}");
+        }
     }
 }
+
