@@ -12,8 +12,12 @@ namespace MicrogameCourse.Microgames
     [SerializeField] private RectTransform target;
     [SerializeField] private TextMeshProUGUI progressText;
     [SerializeField, Min (1)] private int tapsToWin = 5;
+    [SerializeField] private float startSize = 240f;
+    [SerializeField] private float minimumSize = 100f;
+    [SerializeField] private float shrinkPerSecond = 80f;
 
     private int tapsRemaining;
+    public float currentSize;
 
     public override void Begin(MicrogameSession session)
         {
@@ -21,6 +25,17 @@ namespace MicrogameCourse.Microgames
             tapsRemaining = tapsToWin;
             UpdateProgress();
             MoveTarget();
+        }
+
+    private void Update()
+        {
+            if (!isRunning) return;
+
+            currentSize -= shrinkPerSecond * Time.deltaTime;
+            target.sizeDelta = new Vector2(currentSize, currentSize);
+
+            if (currentSize <= minimumSize)
+                MoveTarget();
         }
     public void TapTarget()
         {
@@ -42,6 +57,9 @@ namespace MicrogameCourse.Microgames
     
     private void MoveTarget()
         {
+            currentSize = startSize;
+            target.sizeDelta = new Vector2(currentSize, currentSize);
+            
             float maxX = (playArea.rect.width - target.rect.width) * 0.5f;
             float maxY = (playArea.rect.height - target.rect.height) * 0.5f;
             float x = Random.Range(-maxX, maxX);
