@@ -16,9 +16,10 @@ private Rigidbody rb;
    public void SkateTap()
     {
         if (!isRunning) return;
-        
-        rb.AddForce(Vector3.forward * pushPower, ForceMode.Acceleration);
 
+        if (currentSpeed < maxSpeed)
+        rb.AddForce(Vector3.right * pushPower, ForceMode.Impulse);
+        
 
     }
 }
