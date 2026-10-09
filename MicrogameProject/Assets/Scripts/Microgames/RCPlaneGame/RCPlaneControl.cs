@@ -6,7 +6,7 @@ using System;
 public class RCPlaneControl : MicrogameBehaviour
 {
     public float thrusterPower = 10f;
-    public float topSpeed = 10f;
+    public float topSpeed = 20f;
 
     public Slider thrustSlider;
 
@@ -18,11 +18,11 @@ public class RCPlaneControl : MicrogameBehaviour
 
     }
 
-    void TakeOff()
+    void FixedUpdate()
     {
-        if (!isRunning) return;
-        if (Input.GetKeyDown(KeyCode.W))
-		rb.AddForce(Vector3.forward * thrusterPower);
+       // if (!isRunning) return;
+       // if (Input.GetKeyDown(KeyCode.W))
+		//rb.AddForce(Vector3.forward * thrusterPower);
 
         thrustSlider.onValueChanged.AddListener(delegate{ValueChangeCheck();});
 		
