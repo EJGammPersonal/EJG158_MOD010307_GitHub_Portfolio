@@ -10,7 +10,7 @@ namespace MicrogameCourse.Microgames
 public sealed class RCPlaneGame : MicrogameBehaviour
 {
     [SerializeField] private RectTransform playArea;
-    [SerializeField] private RectTransform target;
+    [SerializeField] private GameObject Ring;
     [SerializeField] private TextMeshProUGUI progressText;
     [SerializeField, Min (1)] private int ringsRemaining = 5;
     private int ringsLeft;
