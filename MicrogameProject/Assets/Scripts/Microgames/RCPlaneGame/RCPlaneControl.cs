@@ -18,13 +18,17 @@ public class RCPlaneControl : MicrogameBehaviour
 
     }
 
-    void FixedUpdate()
+    void Update()
     {
-       // if (!isRunning) return;
-       // if (Input.GetKeyDown(KeyCode.W))
-		//rb.AddForce(Vector3.forward * thrusterPower);
-
+       //if (!isRunning) return;
+       //if (Input.GetKeyDown(KeyCode.W))
+		rb.AddForce(Vector3.forward * thrusterPower);
         thrustSlider.onValueChanged.AddListener(delegate{ValueChangeCheck();});
+
+        if (Input.GetKeyDown(KeyCode.W))
+        {
+            transform.Rotate(Vector3.up);
+        }
 		
     }
 
