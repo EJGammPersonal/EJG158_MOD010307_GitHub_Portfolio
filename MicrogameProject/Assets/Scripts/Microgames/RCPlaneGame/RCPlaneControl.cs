@@ -7,7 +7,7 @@ public class RCPlaneControl : MicrogameBehaviour
 {
     public float thrusterPower = 10f;
     public float topSpeed = 20f;
-
+    public float lift = 1f;
     public Slider thrustSlider;
 
     Rigidbody rb;
@@ -22,18 +22,31 @@ public class RCPlaneControl : MicrogameBehaviour
     {
        //if (!isRunning) return;
        //if (Input.GetKeyDown(KeyCode.W))
-		rb.AddForce(Vector3.forward * thrusterPower);
-        thrustSlider.onValueChanged.AddListener(delegate{ValueChangeCheck();});
+		// rb.AddForce(Vector3.forward * thrusterPower);
+        // thrustSlider.onValueChanged.AddListener(delegate{ValueChangeCheck();});
 
-        if (Input.GetKeyDown(KeyCode.W))
+
+
+
+        if (Keyboard.current.wKey.isPressed)
         {
-            transform.Rotate(Vector3.up);
+            rb.AddRelativeForce(0,1,0);
         }
+       // {
+       //     transform.Rotate(new Vector3(-0.5f, 0, 0));
+       // }
 		
+
+
+        // if (rb.linearVelocity.magnitude < topSpeed)
+        // {
+        //     rb.AddRelativeForce(new Vector3(0, 0, thrusterPower));
+        // }
     }
 
     public void ValueChangeCheck()
     {
         thrusterPower = thrustSlider.value * topSpeed;
+        rb.AddForce(Vector3.forward * thrusterPower);
     }
 }
