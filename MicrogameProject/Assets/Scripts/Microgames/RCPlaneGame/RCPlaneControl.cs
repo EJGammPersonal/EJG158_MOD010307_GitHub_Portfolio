@@ -30,19 +30,29 @@ public class RCPlaneControl : MicrogameBehaviour
 
 
 
-        if (Keyboard.current.wKey.isPressed)
+        if (Keyboard.current.spaceKey.isPressed)
         {
             rb.AddRelativeForce(0,2,0);
         }
 
-        if (Keyboard.current.aKey.isPressed)
+        if (Keyboard.current.wKey.isPressed)
         {
             transform.Rotate(Vector3.left * turnSpeed);
         }
 
-        if (Keyboard.current.dKey.isPressed)
+        if (Keyboard.current.sKey.isPressed)
         {
             transform.Rotate(Vector3.right * turnSpeed);
+        }
+
+        if (Keyboard.current.aKey.isPressed)
+        {
+            transform.Rotate(Vector3.up * turnSpeed);
+        }
+
+        if (Keyboard.current.dKey.isPressed)
+        {
+            transform.Rotate(Vector3.down * turnSpeed);
         }
        // {
        //     transform.Rotate(new Vector3(-0.5f, 0, 0));
