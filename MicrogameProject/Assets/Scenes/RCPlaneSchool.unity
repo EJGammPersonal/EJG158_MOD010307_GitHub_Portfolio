@@ -2154,6 +2154,11 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!4 &1156354238 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 2524761428597425240, guid: 29f45d9a38eab374d835850eb5b88599, type: 3}
+  m_PrefabInstance: {fileID: 3450750170924838256}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1181218362
 GameObject:
   m_ObjectHideFlags: 0
@@ -2391,12 +2396,12 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1457883536}
   serializedVersion: 2
-  m_LocalRotation: {x: 0.13608733, y: 0, z: 0, w: 0.99069685}
-  m_LocalPosition: {x: 0, y: 6.060001, z: -8.57}
+  m_LocalRotation: {x: 0.13608733, y: -0, z: -0, w: 0.99069685}
+  m_LocalPosition: {x: 0.5, y: 5.433711, z: -11.79}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 0}
+  m_Father: {fileID: 1156354238}
   m_LocalEulerAnglesHint: {x: 15.643, y: 0, z: 0}
 --- !u!114 &1457883538
 MonoBehaviour:
@@ -4856,6 +4861,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 1014613334}
     - target: {fileID: 5135224616986361173, guid: 29f45d9a38eab374d835850eb5b88599, type: 3}
+      propertyPath: topSpeed
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5135224616986361173, guid: 29f45d9a38eab374d835850eb5b88599, type: 3}
       propertyPath: thrustSlider
       value: 
       objectReference: {fileID: 1014613334}
@@ -4863,7 +4872,10 @@ PrefabInstance:
     - {fileID: 7887929915481963282, guid: 29f45d9a38eab374d835850eb5b88599, type: 3}
     - {fileID: 4136324972760996290, guid: 29f45d9a38eab374d835850eb5b88599, type: 3}
     m_RemovedGameObjects: []
-    m_AddedGameObjects: []
+    m_AddedGameObjects:
+    - targetCorrespondingSourceObject: {fileID: 2524761428597425240, guid: 29f45d9a38eab374d835850eb5b88599, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1457883537}
     m_AddedComponents:
     - targetCorrespondingSourceObject: {fileID: 2491415259876587960, guid: 29f45d9a38eab374d835850eb5b88599, type: 3}
       insertIndex: -1
@@ -4875,7 +4887,6 @@ SceneRoots:
   m_Roots:
   - {fileID: 1927419559}
   - {fileID: 973866951}
-  - {fileID: 1457883537}
   - {fileID: 1931097876}
   - {fileID: 2074652677}
   - {fileID: 1359584570}

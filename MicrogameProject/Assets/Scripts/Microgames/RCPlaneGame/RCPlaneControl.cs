@@ -8,6 +8,8 @@ public class RCPlaneControl : MicrogameBehaviour
     public float thrusterPower = 10f;
     public float topSpeed = 20f;
     public float lift = 1f;
+
+    public float turnSpeed = 0.05f;
     public Slider thrustSlider;
 
     Rigidbody rb;
@@ -30,7 +32,17 @@ public class RCPlaneControl : MicrogameBehaviour
 
         if (Keyboard.current.wKey.isPressed)
         {
-            rb.AddRelativeForce(0,1,0);
+            rb.AddRelativeForce(0,2,0);
+        }
+
+        if (Keyboard.current.aKey.isPressed)
+        {
+            transform.Rotate(Vector3.left * turnSpeed);
+        }
+
+        if (Keyboard.current.dKey.isPressed)
+        {
+            transform.Rotate(Vector3.right * turnSpeed);
         }
        // {
        //     transform.Rotate(new Vector3(-0.5f, 0, 0));
