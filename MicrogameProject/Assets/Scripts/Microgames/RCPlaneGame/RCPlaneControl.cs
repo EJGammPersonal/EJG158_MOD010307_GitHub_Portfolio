@@ -12,6 +12,7 @@ public class RCPlaneControl : MicrogameBehaviour
     public float turnSpeed = 0.05f;
     public Slider thrustSlider;
 
+    public bool speedActive;
     Rigidbody rb;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
@@ -54,6 +55,12 @@ public class RCPlaneControl : MicrogameBehaviour
         {
             transform.Rotate(Vector3.down * turnSpeed);
         }
+
+        if (speedActive == true)
+        {
+            rb.AddForce(Vector3.forward * thrusterPower);
+        }
+
        // {
        //     transform.Rotate(new Vector3(-0.5f, 0, 0));
        // }
@@ -68,7 +75,10 @@ public class RCPlaneControl : MicrogameBehaviour
 
     public void ValueChangeCheck()
     {
-        thrusterPower = thrustSlider.value * topSpeed;
-        rb.AddForce(Vector3.forward * thrusterPower);
+        thrusterPower = thrustSlider.value;
+        speedActive = true;
+        
     }
+
+    
 }
