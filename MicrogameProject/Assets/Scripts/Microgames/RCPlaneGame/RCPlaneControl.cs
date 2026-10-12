@@ -58,7 +58,9 @@ public class RCPlaneControl : MicrogameBehaviour
 
         if (speedActive == true)
         {
-            if (thrusterPower >= topSpeed) return;
+            if (thrusterPower > topSpeed) return;
+
+            else if(thrusterPower < topSpeed)
             rb.AddForce(Vector3.forward * thrusterPower);
         }
 
