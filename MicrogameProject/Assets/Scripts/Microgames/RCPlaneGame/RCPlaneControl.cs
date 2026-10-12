@@ -6,7 +6,7 @@ using System;
 public class RCPlaneControl : MicrogameBehaviour
 {
     public float thrusterPower = 1;
-    public float topSpeed = 1;
+    public float topSpeed = 20f;
     public float lift = 1f;
 
     public float turnSpeed = 0.05f;
@@ -58,6 +58,7 @@ public class RCPlaneControl : MicrogameBehaviour
 
         if (speedActive == true)
         {
+            if (thrusterPower >= topSpeed) return;
             rb.AddForce(Vector3.forward * thrusterPower);
         }
 
