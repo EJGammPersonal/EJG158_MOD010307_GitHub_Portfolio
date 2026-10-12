@@ -5,8 +5,8 @@ using MicrogameCourse.Framework;
 using System;
 public class RCPlaneControl : MicrogameBehaviour
 {
-    public float thrusterPower = 10f;
-    public float topSpeed = 20f;
+    public float thrusterPower = 1;
+    public float topSpeed = 1;
     public float lift = 1f;
 
     public float turnSpeed = 0.05f;
@@ -25,7 +25,7 @@ public class RCPlaneControl : MicrogameBehaviour
        //if (!isRunning) return;
        //if (Input.GetKeyDown(KeyCode.W))
 		// rb.AddForce(Vector3.forward * thrusterPower);
-        // thrustSlider.onValueChanged.AddListener(delegate{ValueChangeCheck();});
+         thrustSlider.onValueChanged.AddListener(delegate{ValueChangeCheck();});
 
 
 
