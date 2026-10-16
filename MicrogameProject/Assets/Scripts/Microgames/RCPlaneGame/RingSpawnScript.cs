@@ -1,7 +1,10 @@
 using UnityEngine;
+using MicrogameCourse.Framework;
 
 public class RingSpawnScript : MonoBehaviour
 {
+
+    public GameObject RingPrefab;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {

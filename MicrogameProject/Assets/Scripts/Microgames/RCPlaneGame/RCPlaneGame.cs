@@ -13,12 +13,16 @@ public sealed class RCPlaneGame : MicrogameBehaviour
     [SerializeField] private GameObject Ring;
     [SerializeField] private TextMeshProUGUI progressText;
     [SerializeField, Min (1)] private int ringsRemaining = 5;
+
+    public RCPlaneControl rCPlaneControl;
+
     private int ringsLeft;
 
     public override void Begin(MicrogameSession session)
         {
             base.Begin(session);
             ringsLeft = ringsRemaining;
+            rCPlaneControl.GameOn = true;
             UpdateProgress();
             
         }

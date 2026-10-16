@@ -13,19 +13,20 @@ public class RCPlaneControl : MicrogameBehaviour
     public Slider thrustSlider;
 
     public bool speedActive;
+
+    public bool GameOn;
     Rigidbody rb;
+
     // Start is called once before the first execution of Update after the MonoBehaviour is created
-    void Start()
+    void Awake()
     {
         rb = GetComponent<Rigidbody>();
-
     }
 
-    void Update()
+    private void Update()
     {
-       //if (!isRunning) return;
-       //if (Input.GetKeyDown(KeyCode.W))
-		// rb.AddForce(Vector3.forward * thrusterPower);
+       if (!GameOn) return;
+       
          thrustSlider.onValueChanged.AddListener(delegate{ValueChangeCheck();});
 
 
