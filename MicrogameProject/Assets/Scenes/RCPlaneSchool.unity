@@ -2895,7 +2895,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 70fa201193e10c74c854b54822de0550, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::MicrogameCourse.Framework.MicrogameSession
-  game: {fileID: 2119403172}
+  game: {fileID: 2119403174}
   readyPanel: {fileID: 1534880369}
   resultsPanel: {fileID: 157289181}
   playArea: {fileID: 1960534413}
@@ -3906,7 +3906,7 @@ Transform:
   m_GameObject: {fileID: 1776440557}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 250, z: 1250}
+  m_LocalPosition: {x: 0, y: 250, z: 695}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -4605,9 +4605,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1bf99828009221f46a7a5fdafed7927c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::RingSpawnScript
-  RingPrefabLow: {fileID: 4783345907709294664, guid: 00df42cc7018bfd459505ada712e9c1d, type: 3}
-  RingPrefabMid: {fileID: 4783345907709294664, guid: 785857c0eb62cc4468f15cfc1e6bbc7d, type: 3}
-  RingPrefabHigh: {fileID: 4783345907709294664, guid: 7dd45fe59dc5320459fdc780d90a5023, type: 3}
+  RingPrefabLow: {fileID: 239700008895685183, guid: 54d27e585d4b15b4aa1cc0bfc07eadd4, type: 3}
+  RingPrefabMid: {fileID: 2102821786406595923, guid: 70241a8cd2a4f9e44b93bff083727a63, type: 3}
+  RingPrefabHigh: {fileID: 7630148416551145280, guid: 33ff074e46a8ce841a9d668e0b9ac49d, type: 3}
 --- !u!1 &1915319653
 GameObject:
   m_ObjectHideFlags: 0
@@ -5547,7 +5547,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2119403173}
-  - component: {fileID: 2119403172}
+  - component: {fileID: 2119403174}
   m_Layer: 0
   m_Name: RCGame
   m_TagString: Untagged
@@ -5555,23 +5555,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &2119403172
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2119403171}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 821b615f4bc65b64f93a1cd68d68ddc9, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::RCPlaneGame
-  playArea: {fileID: 1960534414}
-  Ring: {fileID: 4783345907709294664, guid: 31ed034657eb17f41b86e42df49dff6e, type: 3}
-  progressText: {fileID: 635027249}
-  ringsRemaining: 5
-  rCPlaneControl: {fileID: 1156354240}
 --- !u!4 &2119403173
 Transform:
   m_ObjectHideFlags: 0
@@ -5587,6 +5570,23 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &2119403174
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2119403171}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 821b615f4bc65b64f93a1cd68d68ddc9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::MicrogameCourse.Microgames.RCPlaneGame
+  playArea: {fileID: 635027248}
+  Ring: {fileID: 0}
+  progressText: {fileID: 635027249}
+  ringsRemaining: 15
+  rCPlaneControl: {fileID: 1156354240}
 --- !u!1 &2127348751
 GameObject:
   m_ObjectHideFlags: 0

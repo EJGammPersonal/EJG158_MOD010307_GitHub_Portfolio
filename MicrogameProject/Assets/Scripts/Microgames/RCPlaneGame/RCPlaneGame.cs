@@ -10,18 +10,21 @@ namespace MicrogameCourse.Microgames
 public sealed class RCPlaneGame : MicrogameBehaviour
 {
     [SerializeField] private RectTransform playArea;
-    [SerializeField] private GameObject Ring;
+    public GameObject RingLow;
+    public GameObject RingMid;
+    public GameObject RingHigh;
     [SerializeField] private TextMeshProUGUI progressText;
-    [SerializeField, Min (1)] private int ringsRemaining = 5;
+    [SerializeField, Min (1)] private int pointsRemaining = 5;
 
     public RCPlaneControl rCPlaneControl;
+    public RingSpawnScript ringSpawnScript;
 
-    private int ringsLeft;
+    private int pointsLeft;
 
     public override void Begin(MicrogameSession session)
         {
             base.Begin(session);
-            ringsLeft = ringsRemaining;
+            pointsLeft = pointsRemaining;
             rCPlaneControl.GameOn = true;
             UpdateProgress();
             
@@ -31,16 +34,16 @@ public sealed class RCPlaneGame : MicrogameBehaviour
         {
             if (!isRunning) return;
 
-            ringsLeft--;
+            pointsLeft--;
             UpdateProgress();
 
-            if (ringsLeft == 0)
+            if (pointsLeft == 0)
             Win();
         }
         
     private void UpdateProgress()
         {
-            progressText.text = $"Rings Left: {ringsLeft}";
+            progressText.text = $"Points Left: {pointsLeft}";
         }
     
 
