@@ -30,7 +30,7 @@ public sealed class RCPlaneGame : MicrogameBehaviour
             
         }
 
-    public void ringsCollected()
+    public void RingsCollected()
         {
             if (!isRunning) return;
 
@@ -45,7 +45,6 @@ public sealed class RCPlaneGame : MicrogameBehaviour
         {
             progressText.text = $"Points Left: {pointsLeft}";
         }
-    
 
 }
 }

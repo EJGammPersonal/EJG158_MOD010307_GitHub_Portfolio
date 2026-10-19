@@ -41,7 +41,7 @@ namespace MicrogameCourse.Learning
 
         private void Log(string eventName)
         {
-            Debug.Log($"[frame {Time.frameCount}] {gameObject.name}: {eventName}");
+            //Debug.Log($"[frame {Time.frameCount}] {gameObject.name}: {eventName}");
         }
     }
 }

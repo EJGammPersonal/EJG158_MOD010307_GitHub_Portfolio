@@ -10,7 +10,10 @@ public class RCPlaneControl : MicrogameBehaviour
     public float lift = 1f;
 
     public float turnSpeed = 0.05f;
+
+    public float maxSpeed = 5f;
     public Slider thrustSlider;
+
 
     public bool speedActive;
 
@@ -59,10 +62,13 @@ public class RCPlaneControl : MicrogameBehaviour
 
         if (speedActive == true)
         {
-            if (thrusterPower > topSpeed) return;
+            if (thrusterPower > topSpeed)
+            rb.linearVelocity = Vector3.ClampMagnitude(rb.linearVelocity, maxSpeed);
 
             else if(thrusterPower < topSpeed)
-            rb.AddForce(Vector3.forward * thrusterPower);
+            rb.AddForce(transform.forward * thrusterPower);
+            rb.linearVelocity = Vector3.ClampMagnitude(rb.linearVelocity, maxSpeed);
+            
         }
 
        // {
@@ -77,11 +83,30 @@ public class RCPlaneControl : MicrogameBehaviour
         // }
     }
 
+    private void FixedUpdate()
+    {
+        if(thrusterPower <= topSpeed) 
+            {
+        
+             }
+    }
+
     public void ValueChangeCheck()
     {
         thrusterPower = thrustSlider.value;
         speedActive = true;
         
+    }
+
+    public void OnTriggerEnter(Collider RingCollision)
+    {   
+        
+        if (RingCollision.gameObject.CompareTag("Low") || RingCollision.gameObject.CompareTag("Mid") || RingCollision.gameObject.CompareTag("High"))
+        {
+            Debug.Log("Collision Happened, Points Should be scored");
+            Destroy(RingCollision.gameObject);
+
+        }
     }
 
     

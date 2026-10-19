@@ -2589,8 +2589,8 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 1, y: 1.1937606, z: 4.7083774}
-  m_Center: {x: 0, y: -0.09688032, z: -0.06851268}
+  m_Size: {x: 1, y: 1.1937606, z: 5.235727}
+  m_Center: {x: 0, y: -0.09688032, z: 0.19516206}
 --- !u!4 &1156354238 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 2524761428597425240, guid: 29f45d9a38eab374d835850eb5b88599, type: 3}
@@ -2901,7 +2901,7 @@ MonoBehaviour:
   playArea: {fileID: 1960534413}
   timerText: {fileID: 484603055}
   resultText: {fileID: 157289182}
-  durationSeconds: 10
+  durationSeconds: 30
 --- !u!4 &1359584570
 Transform:
   m_ObjectHideFlags: 0
@@ -3891,7 +3891,7 @@ BoxCollider:
     serializedVersion: 2
     m_Bits: 0
   m_LayerOverridePriority: 0
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
@@ -4605,9 +4605,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1bf99828009221f46a7a5fdafed7927c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::RingSpawnScript
-  RingPrefabLow: {fileID: 239700008895685183, guid: 54d27e585d4b15b4aa1cc0bfc07eadd4, type: 3}
-  RingPrefabMid: {fileID: 2102821786406595923, guid: 70241a8cd2a4f9e44b93bff083727a63, type: 3}
-  RingPrefabHigh: {fileID: 7630148416551145280, guid: 33ff074e46a8ce841a9d668e0b9ac49d, type: 3}
+  RingPrefabLow: {fileID: 7402545960370746442, guid: 54d27e585d4b15b4aa1cc0bfc07eadd4, type: 3}
+  RingPrefabMid: {fileID: 1553432497742600101, guid: 70241a8cd2a4f9e44b93bff083727a63, type: 3}
+  RingPrefabHigh: {fileID: 8519873037000881728, guid: 33ff074e46a8ce841a9d668e0b9ac49d, type: 3}
 --- !u!1 &1915319653
 GameObject:
   m_ObjectHideFlags: 0
@@ -5550,7 +5550,7 @@ GameObject:
   - component: {fileID: 2119403174}
   m_Layer: 0
   m_Name: RCGame
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -5567,7 +5567,8 @@ Transform:
   m_LocalPosition: {x: 1544, y: 1350, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
-  m_Children: []
+  m_Children:
+  - {fileID: 1156354238}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &2119403174
@@ -5583,10 +5584,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::MicrogameCourse.Microgames.RCPlaneGame
   playArea: {fileID: 635027248}
-  Ring: {fileID: 0}
+  RingLow: {fileID: 7402545960370746442, guid: 54d27e585d4b15b4aa1cc0bfc07eadd4, type: 3}
+  RingMid: {fileID: 1553432497742600101, guid: 70241a8cd2a4f9e44b93bff083727a63, type: 3}
+  RingHigh: {fileID: 8519873037000881728, guid: 33ff074e46a8ce841a9d668e0b9ac49d, type: 3}
   progressText: {fileID: 635027249}
-  ringsRemaining: 15
+  pointsRemaining: 5
   rCPlaneControl: {fileID: 1156354240}
+  ringSpawnScript: {fileID: 1905551756}
 --- !u!1 &2127348751
 GameObject:
   m_ObjectHideFlags: 0
@@ -5750,7 +5754,7 @@ PrefabInstance:
   serializedVersion: 2
   m_Modification:
     serializedVersion: 3
-    m_TransformParent: {fileID: 0}
+    m_TransformParent: {fileID: 2119403173}
     m_Modifications:
     - target: {fileID: 2491415259876587960, guid: 29f45d9a38eab374d835850eb5b88599, type: 3}
       propertyPath: m_Name
@@ -5758,11 +5762,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2524761428597425240, guid: 29f45d9a38eab374d835850eb5b88599, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -0.5
+      value: -1544.5
       objectReference: {fileID: 0}
     - target: {fileID: 2524761428597425240, guid: 29f45d9a38eab374d835850eb5b88599, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 2.880005
+      value: -1347.12
       objectReference: {fileID: 0}
     - target: {fileID: 2524761428597425240, guid: 29f45d9a38eab374d835850eb5b88599, type: 3}
       propertyPath: m_LocalPosition.z
@@ -5809,8 +5813,12 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5135224616986361173, guid: 29f45d9a38eab374d835850eb5b88599, type: 3}
+      propertyPath: maxSpeed
+      value: 20
+      objectReference: {fileID: 0}
+    - target: {fileID: 5135224616986361173, guid: 29f45d9a38eab374d835850eb5b88599, type: 3}
       propertyPath: topSpeed
-      value: 11
+      value: 20
       objectReference: {fileID: 0}
     - target: {fileID: 5135224616986361173, guid: 29f45d9a38eab374d835850eb5b88599, type: 3}
       propertyPath: turnSpeed
@@ -5864,7 +5872,6 @@ SceneRoots:
   - {fileID: 2074652677}
   - {fileID: 1359584570}
   - {fileID: 967624225}
-  - {fileID: 3450750170924838256}
   - {fileID: 2119403173}
   - {fileID: 635634817}
   - {fileID: 1776440559}

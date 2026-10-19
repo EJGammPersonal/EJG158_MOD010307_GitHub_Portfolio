@@ -13,7 +13,7 @@ public class RingSpawnScript : MonoBehaviour
     {
         int spawnLocationX = Random.Range(-200, 200);
         int spawnLocationY = Random.Range(0, 50);
-        int spawnLocationZ = Random.Range(1000, 2000);
+        int spawnLocationZ = Random.Range(200, 1000);
 
         Vector3 spawnLocation = new Vector3(spawnLocationX, spawnLocationY, spawnLocationZ);
         Instantiate(RingPrefabLow, spawnLocation, Quaternion.identity);
@@ -23,7 +23,7 @@ public class RingSpawnScript : MonoBehaviour
     {
         int spawnLocationX = Random.Range(-200, 200);
         int spawnLocationY = Random.Range(0, 50);
-        int spawnLocationZ = Random.Range(200, 1500);
+        int spawnLocationZ = Random.Range(300, 1100);
 
         Vector3 spawnLocation = new Vector3(spawnLocationX, spawnLocationY, spawnLocationZ);
         Instantiate(RingPrefabMid, spawnLocation, Quaternion.identity);
@@ -33,7 +33,7 @@ public class RingSpawnScript : MonoBehaviour
     {
         int spawnLocationX = Random.Range(-200, 200);
         int spawnLocationY = Random.Range(0, 50);
-        int spawnLocationZ = Random.Range(1000, 2000);
+        int spawnLocationZ = Random.Range(500, 1200);
 
         Vector3 spawnLocation = new Vector3(spawnLocationX, spawnLocationY, spawnLocationZ);
         Instantiate(RingPrefabHigh, spawnLocation, Quaternion.identity);
