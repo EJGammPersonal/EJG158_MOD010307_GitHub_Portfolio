@@ -3,6 +3,7 @@ using UnityEngine.InputSystem;
 using UnityEngine.UI;
 using MicrogameCourse.Framework;
 using System;
+using MicrogameCourse.Microgames;
 public class RCPlaneControl : MicrogameBehaviour
 {
     public float thrusterPower = 1;
@@ -14,11 +15,19 @@ public class RCPlaneControl : MicrogameBehaviour
     public float maxSpeed = 5f;
     public Slider thrustSlider;
 
+    public RCPlaneGame rCPlaneGame;
+
 
     public bool speedActive;
 
     public bool GameOn;
     Rigidbody rb;
+
+   public bool liftPressed;
+   public bool noseUpPressed;
+    public bool noseDownPressed;
+    public bool tiltLeftPressed;
+    public bool tiltRightPressed;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Awake()
@@ -26,38 +35,57 @@ public class RCPlaneControl : MicrogameBehaviour
         rb = GetComponent<Rigidbody>();
     }
 
-    private void Update()
+    public void Update()
     {
        if (!GameOn) return;
        
          thrustSlider.onValueChanged.AddListener(delegate{ValueChangeCheck();});
 
 
-
-
         if (Keyboard.current.spaceKey.isPressed)
         {
-            rb.AddRelativeForce(0,2,0);
+            //liftPressed = true;
+           // if (liftPressed == true)
+            //{
+                rb.AddRelativeForce(0,2,0);
+            //}
+            // rb.AddRelativeForce(0,2,0);
         }
 
         if (Keyboard.current.wKey.isPressed)
         {
+           // noseUpPressed = true;
+           // if (noseUpPressed == true)
+           // {
             transform.Rotate(Vector3.left * turnSpeed);
+            //}
         }
 
         if (Keyboard.current.sKey.isPressed)
         {
+            // //noseDownPressed = true;
+            // if (noseDownPressed == true)
+            // {
             transform.Rotate(Vector3.right * turnSpeed);
+            //}
         }
 
         if (Keyboard.current.aKey.isPressed)
         {
+           // tiltLeftPressed = true;
+           // if (tiltLeftPressed == true)
+           // {
             transform.Rotate(Vector3.up * turnSpeed);
+           // }
         }
 
         if (Keyboard.current.dKey.isPressed)
         {
+            //tiltRightPressed = true;
+            //if (tiltRightPressed == true)
+           // {
             transform.Rotate(Vector3.down * turnSpeed);
+           // }
         }
 
         if (speedActive == true)
@@ -83,14 +111,6 @@ public class RCPlaneControl : MicrogameBehaviour
         // }
     }
 
-    private void FixedUpdate()
-    {
-        if(thrusterPower <= topSpeed) 
-            {
-        
-             }
-    }
-
     public void ValueChangeCheck()
     {
         thrusterPower = thrustSlider.value;
@@ -105,9 +125,32 @@ public class RCPlaneControl : MicrogameBehaviour
         {
             Debug.Log("Collision Happened, Points Should be scored");
             Destroy(RingCollision.gameObject);
-
+            //rCPlaneGame.pointsRemaining = -1;
         }
     }
 
-    
+    public void Up()
+    {
+         rb.AddRelativeForce(0,2,0);
+    }
+
+    public void noseUp()
+    {
+        transform.Rotate(Vector3.left * turnSpeed);
+    }
+
+    public void noseDown()
+    { 
+        transform.Rotate(Vector3.right * turnSpeed);      
+    }
+
+    public void left()
+    {
+        transform.Rotate(Vector3.up * turnSpeed);
+    }
+
+    public void right()
+    {
+        transform.Rotate(Vector3.down * turnSpeed);
+    }
 }
