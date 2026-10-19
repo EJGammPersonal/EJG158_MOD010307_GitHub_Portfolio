@@ -16,6 +16,7 @@ public class RCPlaneControl : MicrogameBehaviour
     public Slider thrustSlider;
 
     public RCPlaneGame rCPlaneGame;
+    public MyButton liftButton;
 
 
     public bool speedActive;
@@ -42,7 +43,7 @@ public class RCPlaneControl : MicrogameBehaviour
          thrustSlider.onValueChanged.AddListener(delegate{ValueChangeCheck();});
 
 
-        if (Keyboard.current.spaceKey.isPressed)
+        if (Keyboard.current.spaceKey.isPressed || liftButton.buttonPressed == true)
         {
             //liftPressed = true;
            // if (liftPressed == true)
