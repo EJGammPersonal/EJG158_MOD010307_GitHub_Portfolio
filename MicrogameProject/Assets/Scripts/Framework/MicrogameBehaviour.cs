@@ -1,9 +1,6 @@
 using UnityEngine;
 namespace MicrogameCourse.Framework
 {
-
-
-
     public abstract class MicrogameBehaviour : MonoBehaviour
     {
         //Microgame Session

@@ -39,6 +39,7 @@ namespace MicrogameCourse.Framework
             currentPhase = Phase.Playing;
             ShowTime();
             game.Begin(this);
+            
         }
 
         private void Update()

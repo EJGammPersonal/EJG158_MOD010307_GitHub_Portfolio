@@ -1,0 +1,48 @@
+using MicrogameCourse.Framework;
+using TMPro;
+using Unity.VisualScripting;
+using UnityEngine;
+using UnityEngine.UI;
+
+namespace MicrogameCourse.Microgames
+{
+
+public sealed class RCPlaneGame : MicrogameBehaviour
+{
+    [SerializeField] private RectTransform playArea;
+    [SerializeField] private GameObject Ring;
+    [SerializeField] private TextMeshProUGUI progressText;
+    [SerializeField, Min (1)] private int ringsRemaining = 5;
+
+    public RCPlaneControl rCPlaneControl;
+
+    private int ringsLeft;
+
+    public override void Begin(MicrogameSession session)
+        {
+            base.Begin(session);
+            ringsLeft = ringsRemaining;
+            rCPlaneControl.GameOn = true;
+            UpdateProgress();
+            
+        }
+
+    public void ringsCollected()
+        {
+            if (!isRunning) return;
+
+            ringsLeft--;
+            UpdateProgress();
+
+            if (ringsLeft == 0)
+            Win();
+        }
+        
+    private void UpdateProgress()
+        {
+            progressText.text = $"Rings Left: {ringsLeft}";
+        }
+    
+
+}
+}
