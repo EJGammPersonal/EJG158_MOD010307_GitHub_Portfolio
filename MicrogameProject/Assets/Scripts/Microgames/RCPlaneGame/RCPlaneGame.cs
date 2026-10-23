@@ -7,7 +7,7 @@ using UnityEngine.UI;
 namespace MicrogameCourse.Microgames
 {
 
-public sealed class RCPlaneGame : MicrogameBehaviour
+public class RCPlaneGame : MicrogameBehaviour
 {
     [SerializeField] private RectTransform playArea;
     public GameObject RingLow;
@@ -33,7 +33,7 @@ public sealed class RCPlaneGame : MicrogameBehaviour
     public void RingsCollected()
         {
             if (!isRunning) return;
-
+            
             pointsLeft--;
             UpdateProgress();
 
@@ -43,7 +43,7 @@ public sealed class RCPlaneGame : MicrogameBehaviour
         
     private void UpdateProgress()
         {
-            
+
             progressText.text = $"Points Left: {pointsLeft}";
         }
 

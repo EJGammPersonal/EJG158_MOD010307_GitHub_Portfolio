@@ -130,7 +130,7 @@ public class RCPlaneControl : MicrogameBehaviour
         {
             Debug.Log("Collision Happened, Points Should be scored");
             Destroy(RingCollision.gameObject);
-            //rCPlaneGame.pointsRemaining = -1;
+            rCPlaneGame.pointsRemaining = -1;
         }
     }
 
