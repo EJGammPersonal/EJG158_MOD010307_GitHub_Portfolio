@@ -37,7 +37,7 @@ public class RCPlaneGame : MicrogameBehaviour
             pointsLeft--;
             UpdateProgress();
 
-            if (pointsLeft == 0)
+            if (pointsLeft <= 0)
             Win();
         }
         
