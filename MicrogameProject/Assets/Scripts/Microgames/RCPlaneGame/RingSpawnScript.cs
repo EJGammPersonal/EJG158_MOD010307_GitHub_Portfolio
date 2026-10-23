@@ -40,7 +40,7 @@ public class RingSpawnScript : MonoBehaviour
         for (int i = 0; i < 1; i++ )
         {
         int spawnLocationX = Random.Range(-200, 200);
-        int spawnLocationY = Random.Range(0, 50);
+        int spawnLocationY = Random.Range(200, 500);
         int spawnLocationZ = Random.Range(500, 1200);
 
         Vector3 spawnLocation = new Vector3(spawnLocationX, spawnLocationY, spawnLocationZ);
