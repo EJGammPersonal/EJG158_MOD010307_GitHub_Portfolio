@@ -41,9 +41,9 @@ public class RCPlaneGame : MicrogameBehaviour
             Win();
         }
         
-    private void UpdateProgress()
+    public void UpdateProgress()
         {
-
+            
             progressText.text = $"Points Left: {pointsLeft}";
         }
 
