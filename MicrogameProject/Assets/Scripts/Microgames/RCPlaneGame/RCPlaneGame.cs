@@ -14,12 +14,12 @@ public class RCPlaneGame : MicrogameBehaviour
     public GameObject RingMid;
     public GameObject RingHigh;
     [SerializeField] private TextMeshProUGUI progressText;
-    [SerializeField, Min (1)] private int pointsRemaining = 5;
+    public int pointsRemaining = 5;
 
     public RCPlaneControl rCPlaneControl;
     public RingSpawnScript ringSpawnScript;
 
-    private int pointsLeft;
+    public int pointsLeft;
 
     public override void Begin(MicrogameSession session)
         {
@@ -33,7 +33,7 @@ public class RCPlaneGame : MicrogameBehaviour
     public void RingsCollected()
         {
             if (!isRunning) return;
-            
+
             pointsLeft--;
             UpdateProgress();
 

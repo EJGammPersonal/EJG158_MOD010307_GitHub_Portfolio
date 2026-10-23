@@ -2067,9 +2067,10 @@ GameObject:
   - component: {fileID: 853708062}
   - component: {fileID: 853708065}
   - component: {fileID: 853708064}
+  - component: {fileID: 853708066}
   - component: {fileID: 853708063}
   m_Layer: 5
-  m_Name: Right
+  m_Name: Left
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2189,6 +2190,19 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 853708061}
   m_CullTransparentMesh: 1
+--- !u!114 &853708066
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 853708061}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 909dc7153aca234449c88d62e1eda259, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::MyButton
+  buttonPressed: 0
 --- !u!1 &910272723
 GameObject:
   m_ObjectHideFlags: 0
@@ -2200,6 +2214,7 @@ GameObject:
   - component: {fileID: 910272724}
   - component: {fileID: 910272727}
   - component: {fileID: 910272726}
+  - component: {fileID: 910272728}
   - component: {fileID: 910272725}
   m_Layer: 5
   m_Name: Down
@@ -2322,6 +2337,19 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 910272723}
   m_CullTransparentMesh: 1
+--- !u!114 &910272728
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 910272723}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 909dc7153aca234449c88d62e1eda259, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::MyButton
+  buttonPressed: 0
 --- !u!1 &967624222
 GameObject:
   m_ObjectHideFlags: 0
@@ -2410,6 +2438,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1014613333}
+  - component: {fileID: 1014613335}
   - component: {fileID: 1014613334}
   m_Layer: 5
   m_Name: SpeedControl
@@ -2503,6 +2532,19 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+--- !u!114 &1014613335
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1014613332}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 909dc7153aca234449c88d62e1eda259, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::MyButton
+  buttonPressed: 0
 --- !u!1 &1077903937
 GameObject:
   m_ObjectHideFlags: 0
@@ -2668,6 +2710,7 @@ GameObject:
   - component: {fileID: 1181218363}
   - component: {fileID: 1181218367}
   - component: {fileID: 1181218366}
+  - component: {fileID: 1181218368}
   - component: {fileID: 1181218365}
   - component: {fileID: 1181218364}
   m_Layer: 5
@@ -2804,6 +2847,19 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1181218362}
   m_CullTransparentMesh: 1
+--- !u!114 &1181218368
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1181218362}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 909dc7153aca234449c88d62e1eda259, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::MyButton
+  buttonPressed: 0
 --- !u!1 &1189528048
 GameObject:
   m_ObjectHideFlags: 0
@@ -4298,9 +4354,10 @@ GameObject:
   - component: {fileID: 1854633756}
   - component: {fileID: 1854633759}
   - component: {fileID: 1854633758}
+  - component: {fileID: 1854633760}
   - component: {fileID: 1854633757}
   m_Layer: 5
-  m_Name: Left
+  m_Name: Right
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -4420,6 +4477,19 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1854633755}
   m_CullTransparentMesh: 1
+--- !u!114 &1854633760
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1854633755}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 909dc7153aca234449c88d62e1eda259, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::MyButton
+  buttonPressed: 0
 --- !u!1 &1866635965
 GameObject:
   m_ObjectHideFlags: 0
@@ -5882,9 +5952,21 @@ PrefabInstance:
       value: 51
       objectReference: {fileID: 0}
     - target: {fileID: 5135224616986361173, guid: 29f45d9a38eab374d835850eb5b88599, type: 3}
+      propertyPath: upButton
+      value: 
+      objectReference: {fileID: 1181218368}
+    - target: {fileID: 5135224616986361173, guid: 29f45d9a38eab374d835850eb5b88599, type: 3}
       propertyPath: turnSpeed
       value: 0.05
       objectReference: {fileID: 0}
+    - target: {fileID: 5135224616986361173, guid: 29f45d9a38eab374d835850eb5b88599, type: 3}
+      propertyPath: downButton
+      value: 
+      objectReference: {fileID: 910272728}
+    - target: {fileID: 5135224616986361173, guid: 29f45d9a38eab374d835850eb5b88599, type: 3}
+      propertyPath: leftButton
+      value: 
+      objectReference: {fileID: 853708066}
     - target: {fileID: 5135224616986361173, guid: 29f45d9a38eab374d835850eb5b88599, type: 3}
       propertyPath: liftButton
       value: 
@@ -5893,6 +5975,10 @@ PrefabInstance:
       propertyPath: rCPlaneGame
       value: 
       objectReference: {fileID: 2119403174}
+    - target: {fileID: 5135224616986361173, guid: 29f45d9a38eab374d835850eb5b88599, type: 3}
+      propertyPath: rightButton
+      value: 
+      objectReference: {fileID: 1854633760}
     - target: {fileID: 5135224616986361173, guid: 29f45d9a38eab374d835850eb5b88599, type: 3}
       propertyPath: speedActive
       value: 0
