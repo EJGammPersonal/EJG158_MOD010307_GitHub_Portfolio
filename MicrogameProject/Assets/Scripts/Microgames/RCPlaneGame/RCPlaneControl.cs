@@ -17,6 +17,10 @@ public class RCPlaneControl : MicrogameBehaviour
 
     public RCPlaneGame rCPlaneGame;
     public MyButton liftButton;
+    public MyButton upButton;
+    public MyButton downButton;
+    public MyButton leftButton;
+    public MyButton rightButton;
 
 
     public bool speedActive;
@@ -53,7 +57,7 @@ public class RCPlaneControl : MicrogameBehaviour
             // rb.AddRelativeForce(0,2,0);
         }
 
-        if (Keyboard.current.wKey.isPressed)
+        if (Keyboard.current.wKey.isPressed || upButton.buttonPressed == true)
         {
            // noseUpPressed = true;
            // if (noseUpPressed == true)
@@ -62,7 +66,7 @@ public class RCPlaneControl : MicrogameBehaviour
             //}
         }
 
-        if (Keyboard.current.sKey.isPressed)
+        if (Keyboard.current.sKey.isPressed || downButton.buttonPressed == true)
         {
             // //noseDownPressed = true;
             // if (noseDownPressed == true)
@@ -71,7 +75,7 @@ public class RCPlaneControl : MicrogameBehaviour
             //}
         }
 
-        if (Keyboard.current.aKey.isPressed)
+        if (Keyboard.current.dKey.isPressed|| leftButton.buttonPressed == true)
         {
            // tiltLeftPressed = true;
            // if (tiltLeftPressed == true)
@@ -80,7 +84,7 @@ public class RCPlaneControl : MicrogameBehaviour
            // }
         }
 
-        if (Keyboard.current.dKey.isPressed)
+        if (Keyboard.current.aKey.isPressed || rightButton.buttonPressed == true)
         {
             //tiltRightPressed = true;
             //if (tiltRightPressed == true)

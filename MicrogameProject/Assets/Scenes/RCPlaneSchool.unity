@@ -379,9 +379,10 @@ GameObject:
   - component: {fileID: 204353709}
   - component: {fileID: 204353712}
   - component: {fileID: 204353711}
+  - component: {fileID: 204353713}
   - component: {fileID: 204353710}
   m_Layer: 5
-  m_Name: Engine
+  m_Name: Lift
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -450,7 +451,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 204353711}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1156354240}
+        m_TargetAssemblyTypeName: RCPlaneControl, Assembly-CSharp
+        m_MethodName: Up
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &204353711
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -489,6 +502,19 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 204353708}
   m_CullTransparentMesh: 1
+--- !u!114 &204353713
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 204353708}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 909dc7153aca234449c88d62e1eda259, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::MyButton
+  buttonPressed: 0
 --- !u!1 &348585609
 GameObject:
   m_ObjectHideFlags: 0
@@ -2112,7 +2138,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 853708064}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1156354240}
+        m_TargetAssemblyTypeName: RCPlaneControl, Assembly-CSharp
+        m_MethodName: right
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &853708064
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2233,7 +2271,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 910272726}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1156354240}
+        m_TargetAssemblyTypeName: RCPlaneControl, Assembly-CSharp
+        m_MethodName: noseDown
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &910272726
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2435,7 +2485,7 @@ MonoBehaviour:
   m_HandleRect: {fileID: 1806307500}
   m_Direction: 0
   m_MinValue: 0
-  m_MaxValue: 10
+  m_MaxValue: 20
   m_WholeNumbers: 1
   m_Value: 0
   m_OnValueChanged:
@@ -2704,13 +2754,13 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1156354231}
-        m_TargetAssemblyTypeName: 
-        m_MethodName: 
+      - m_Target: {fileID: 1156354240}
+        m_TargetAssemblyTypeName: RCPlaneControl, Assembly-CSharp
+        m_MethodName: noseUp
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: 
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
@@ -4319,7 +4369,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1854633758}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1156354240}
+        m_TargetAssemblyTypeName: RCPlaneControl, Assembly-CSharp
+        m_MethodName: left
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1854633758
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4392,11 +4454,11 @@ RectTransform:
   - {fileID: 157289184}
   - {fileID: 406597254}
   - {fileID: 2134677469}
-  m_Father: {fileID: 2074652677}
+  m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 1544, y: 720}
   m_SizeDelta: {x: 930, y: 1100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1866635967
@@ -5390,7 +5452,6 @@ RectTransform:
   - {fileID: 484603053}
   - {fileID: 1960534414}
   - {fileID: 1534880370}
-  - {fileID: 1866635966}
   - {fileID: 1608768065}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -5456,7 +5517,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'Engine
+  m_text: 'Lift
 
 '
   m_isRightToLeft: 0
@@ -5814,16 +5875,24 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5135224616986361173, guid: 29f45d9a38eab374d835850eb5b88599, type: 3}
       propertyPath: maxSpeed
-      value: 20
+      value: 51
       objectReference: {fileID: 0}
     - target: {fileID: 5135224616986361173, guid: 29f45d9a38eab374d835850eb5b88599, type: 3}
       propertyPath: topSpeed
-      value: 20
+      value: 51
       objectReference: {fileID: 0}
     - target: {fileID: 5135224616986361173, guid: 29f45d9a38eab374d835850eb5b88599, type: 3}
       propertyPath: turnSpeed
       value: 0.05
       objectReference: {fileID: 0}
+    - target: {fileID: 5135224616986361173, guid: 29f45d9a38eab374d835850eb5b88599, type: 3}
+      propertyPath: liftButton
+      value: 
+      objectReference: {fileID: 204353713}
+    - target: {fileID: 5135224616986361173, guid: 29f45d9a38eab374d835850eb5b88599, type: 3}
+      propertyPath: rCPlaneGame
+      value: 
+      objectReference: {fileID: 2119403174}
     - target: {fileID: 5135224616986361173, guid: 29f45d9a38eab374d835850eb5b88599, type: 3}
       propertyPath: speedActive
       value: 0
@@ -5834,7 +5903,7 @@ PrefabInstance:
       objectReference: {fileID: 1014613334}
     - target: {fileID: 5135224616986361173, guid: 29f45d9a38eab374d835850eb5b88599, type: 3}
       propertyPath: thrusterPower
-      value: 0.001
+      value: 50
       objectReference: {fileID: 0}
     - target: {fileID: 6612680832228835959, guid: 29f45d9a38eab374d835850eb5b88599, type: 3}
       propertyPath: 'm_Materials.Array.data[0]'
@@ -5875,3 +5944,4 @@ SceneRoots:
   - {fileID: 2119403173}
   - {fileID: 635634817}
   - {fileID: 1776440559}
+  - {fileID: 1866635966}
