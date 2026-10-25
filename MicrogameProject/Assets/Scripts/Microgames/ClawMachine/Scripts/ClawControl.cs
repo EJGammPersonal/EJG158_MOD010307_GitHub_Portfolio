@@ -12,6 +12,7 @@ public class ClawControl : MonoBehaviour
     public bool ClawUsedThisTurn;
     public int tokens;
     public MyButton ClawButton;
+    public MyButton ClawDownButton;
 
     Rigidbody rb;
 
@@ -24,12 +25,18 @@ public class ClawControl : MonoBehaviour
     {
        if (!GameOn) return;
        {
-        
+
         if (Keyboard.current.spaceKey.isPressed == true && ClawUsedThisTurn == false || ClawButton.buttonPressed == true && ClawUsedThisTurn == false)
         {
             ClawMovePressed = true;
             ClawUsedThisTurn = true;
-            tokens = -1;
+            tokens =- 1;
+            rb.AddRelativeForce(20,0,0);
+        }
+
+        if (Keyboard.current.sKey.isPressed == true && ClawMovePressed == true || ClawDownButton.buttonPressed == true && ClawMovePressed == true)
+        {
+            rb.AddRelativeForce(-20,-20,0);
         }
 
        }
