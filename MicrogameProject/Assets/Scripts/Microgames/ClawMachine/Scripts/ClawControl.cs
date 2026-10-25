@@ -24,8 +24,8 @@ public class ClawControl : MonoBehaviour
     {
        if (!GameOn) return;
        {
-
-        if (Keyboard.current.spaceKey.isPressed && ClawUsedThisTurn == false || ClawButton.buttonPressed == true && ClawUsedThisTurn == false)
+        
+        if (Keyboard.current.spaceKey.isPressed == true && ClawUsedThisTurn == false || ClawButton.buttonPressed == true && ClawUsedThisTurn == false)
         {
             ClawMovePressed = true;
             ClawUsedThisTurn = true;
@@ -39,7 +39,7 @@ public class ClawControl : MonoBehaviour
     {
         if (ClawMovePressed == true)
         {
-            rb.AddRelativeForce(2,0,0);
+            rb.AddRelativeForce(20,0,0);
         }
 
     }

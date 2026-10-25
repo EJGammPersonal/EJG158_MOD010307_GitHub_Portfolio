@@ -18,8 +18,8 @@ public class ClawMachineGame : MicrogameBehaviour
     [SerializeField] private TextMeshProUGUI progressText;
     public int pointsRemaining = 5;
 
-    public RCPlaneControl rCPlaneControl;
-    public RingSpawnScript ringSpawnScript;
+    public ClawControl clawControl;
+    public PlushieSpawner plushieSpawner;
 
     public int pointsLeft;
 
@@ -27,7 +27,7 @@ public class ClawMachineGame : MicrogameBehaviour
         {
             base.Begin(session);
             pointsLeft = pointsRemaining;
-            rCPlaneControl.GameOn = true;
+            clawControl.GameOn = true;
             UpdateProgress();
             
         }
