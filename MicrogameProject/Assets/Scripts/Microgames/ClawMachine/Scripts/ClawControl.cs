@@ -9,7 +9,10 @@ public class ClawControl : MonoBehaviour
     public bool ClawActive;
     public bool GameOn;
     public bool ClawMovePressed;
+    public bool ClawDownPressed;
     public bool ClawUsedThisTurn;
+    public bool ClawDownThisTurn;
+    public bool ClawDownInput;
     public int tokens;
     public MyButton ClawButton;
     public MyButton ClawDownButton;
@@ -34,8 +37,10 @@ public class ClawControl : MonoBehaviour
             rb.AddRelativeForce(20,0,0);
         }
 
-        if (Keyboard.current.sKey.isPressed == true && ClawMovePressed == true || ClawDownButton.buttonPressed == true && ClawMovePressed == true)
-        {
+        if (Keyboard.current.sKey.isPressed == true && ClawMovePressed == true  && ClawDownThisTurn == false || ClawDownButton.buttonPressed == true && ClawMovePressed == true && ClawDownThisTurn == false)
+        {   
+            ClawDownPressed = true;
+            ClawDownThisTurn = true;
             rb.AddRelativeForce(-20,-20,0);
         }
 
@@ -44,9 +49,20 @@ public class ClawControl : MonoBehaviour
     }
     public void ClawMoving()
     {
-        if (ClawMovePressed == true)
+        if (ClawMovePressed == true && ClawUsedThisTurn == false)
         {
             rb.AddRelativeForce(20,0,0);
+            ClawUsedThisTurn = true;
+        }
+
+    }
+
+    public void ClawMoveDown()
+    {
+        if (ClawDownInput == true && ClawMovePressed == true && ClawDownThisTurn == false)
+        {
+            rb.AddRelativeForce(-20,-20,0);
+            ClawDownThisTurn = true;
         }
 
     }

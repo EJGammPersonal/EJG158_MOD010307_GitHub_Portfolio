@@ -1,16 +1,14 @@
 using UnityEngine;
+using UnityEngine.InputSystem;
+using UnityEngine.UI;
+using MicrogameCourse.Framework;
+using System;
+using MicrogameCourse.Microgames;
 
 public class PlushieSpawner : MonoBehaviour
 {
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
-    void Start()
-    {
-        
-    }
+    public Transform PlushieSpawnOne;
+    public Transform PlushieSpawnTwo;
+    public Transform PlushieSpawnThree;
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
 }
