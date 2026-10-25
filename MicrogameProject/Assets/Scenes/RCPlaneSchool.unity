@@ -5722,6 +5722,7 @@ MonoBehaviour:
   pointsRemaining: 5
   rCPlaneControl: {fileID: 1156354240}
   ringSpawnScript: {fileID: 1905551756}
+  pointsLeft: 0
 --- !u!1 &2127348751
 GameObject:
   m_ObjectHideFlags: 0
