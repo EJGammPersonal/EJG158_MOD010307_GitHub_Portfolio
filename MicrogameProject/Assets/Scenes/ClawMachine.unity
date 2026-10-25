@@ -504,7 +504,7 @@ MonoBehaviour:
   progressText: {fileID: 1946587511}
   pointsRemaining: 5
   clawControl: {fileID: 290615291}
-  plushieSpawner: {fileID: 956104367}
+  plushieSpawner: {fileID: 0}
   pointsLeft: 0
 --- !u!4 &152705281
 Transform:
@@ -584,6 +584,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 308573803}
+  - component: {fileID: 308573804}
   m_Layer: 0
   m_Name: SpawnPointThree
   m_TagString: Untagged
@@ -606,6 +607,26 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &308573804
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 308573802}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 577b661448e2b1b46ba3a6498c65e88b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::PlushieSpawner
+  PlushieSingle: {fileID: 1200106392254972005, guid: 1d90ffa1417678140b79c38d82995b8d, type: 3}
+  PlushieDuo: {fileID: 2262430051389081891, guid: a36ca70e9b0648647a4fa117e9bea54d, type: 3}
+  PlushieTrio: {fileID: 6445301882884957565, guid: 7737c649184054e4bb833cabc509fbe1, type: 3}
+  PlushieBig: {fileID: 7600814676510201308, guid: 07d68b5ebb192174199b4f93a9344f91, type: 3}
+  PlushieLegendary: {fileID: 1569284847993538447, guid: 979eef28a4284d84690a4e2c407bf534, type: 3}
+  SpawnQuality: 0
+  SpawnCount: 0
+  GameOn: 0
 --- !u!1 &376692251
 GameObject:
   m_ObjectHideFlags: 0
@@ -1169,72 +1190,6 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 729179767}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
---- !u!1 &956104364
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 956104365}
-  - component: {fileID: 956104366}
-  - component: {fileID: 956104367}
-  m_Layer: 0
-  m_Name: PlushieArea
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &956104365
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 956104364}
-  serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.72, y: -1.16, z: 3}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 1070520518}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!65 &956104366
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 956104364}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Size: {x: 12.5537815, y: 1, z: 1}
-  m_Center: {x: 2.4359598, y: 0, z: 0}
---- !u!114 &956104367
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 956104364}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 577b661448e2b1b46ba3a6498c65e88b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::PlushieSpawner
 --- !u!1 &961459927
 GameObject:
   m_ObjectHideFlags: 0
@@ -1360,7 +1315,6 @@ Transform:
   - {fileID: 729179768}
   - {fileID: 693737839}
   - {fileID: 376692252}
-  - {fileID: 956104365}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1104344254
@@ -1509,6 +1463,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1121592967}
+  - component: {fileID: 1121592968}
   m_Layer: 0
   m_Name: SpawnPointTwo
   m_TagString: Untagged
@@ -1531,6 +1486,26 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1121592968
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1121592966}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 577b661448e2b1b46ba3a6498c65e88b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::PlushieSpawner
+  PlushieSingle: {fileID: 1200106392254972005, guid: 1d90ffa1417678140b79c38d82995b8d, type: 3}
+  PlushieDuo: {fileID: 2262430051389081891, guid: a36ca70e9b0648647a4fa117e9bea54d, type: 3}
+  PlushieTrio: {fileID: 6445301882884957565, guid: 7737c649184054e4bb833cabc509fbe1, type: 3}
+  PlushieBig: {fileID: 7600814676510201308, guid: 07d68b5ebb192174199b4f93a9344f91, type: 3}
+  PlushieLegendary: {fileID: 1569284847993538447, guid: 979eef28a4284d84690a4e2c407bf534, type: 3}
+  SpawnQuality: 0
+  SpawnCount: 0
+  GameOn: 0
 --- !u!1 &1144224835
 GameObject:
   m_ObjectHideFlags: 0
@@ -2857,6 +2832,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2016499175}
+  - component: {fileID: 2016499176}
   m_Layer: 0
   m_Name: SpawnPointOne
   m_TagString: Untagged
@@ -2879,6 +2855,26 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &2016499176
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2016499174}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 577b661448e2b1b46ba3a6498c65e88b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::PlushieSpawner
+  PlushieSingle: {fileID: 1200106392254972005, guid: 1d90ffa1417678140b79c38d82995b8d, type: 3}
+  PlushieDuo: {fileID: 2262430051389081891, guid: a36ca70e9b0648647a4fa117e9bea54d, type: 3}
+  PlushieTrio: {fileID: 6445301882884957565, guid: 7737c649184054e4bb833cabc509fbe1, type: 3}
+  PlushieBig: {fileID: 7600814676510201308, guid: 07d68b5ebb192174199b4f93a9344f91, type: 3}
+  PlushieLegendary: {fileID: 1569284847993538447, guid: 979eef28a4284d84690a4e2c407bf534, type: 3}
+  SpawnQuality: 0
+  SpawnCount: 0
+  GameOn: 0
 --- !u!1 &2023735734
 GameObject:
   m_ObjectHideFlags: 0

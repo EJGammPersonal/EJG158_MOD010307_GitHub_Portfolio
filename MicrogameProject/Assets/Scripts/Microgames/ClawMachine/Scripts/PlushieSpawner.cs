@@ -10,10 +10,6 @@ using System.Collections.Generic;
 public class PlushieSpawner : MonoBehaviour
 {
     List<GameObject> plushieList = new List<GameObject>();
-    public Transform PlushieSpawnOne;
-    public Transform PlushieSpawnTwo;
-    public Transform PlushieSpawnThree;
-
     public GameObject PlushieSingle;
     public GameObject PlushieDuo;
     public GameObject PlushieTrio;
@@ -22,6 +18,7 @@ public class PlushieSpawner : MonoBehaviour
 
     public int SpawnQuality; 
     public int SpawnCount;
+    public bool GameOn;
    
     public void Start()
     {
@@ -30,12 +27,17 @@ public class PlushieSpawner : MonoBehaviour
         plushieList.Add(PlushieTrio);
         plushieList.Add(PlushieBig);
         plushieList.Add(PlushieLegendary);
+        int plushieIndex = UnityEngine.Random.Range(1, 5);
+        Instantiate(plushieList[plushieIndex]);
+        Debug.Log("Spawns Attempted");
     }
     
     public void SpawnPlush()
     {
-        int plushieIndex = UnityEngine.Random.Range(1, 100);
+        int plushieIndex = UnityEngine.Random.Range(1, 5);
         Instantiate(plushieList[plushieIndex]);
+        Debug.Log("Spawns Attempted");
+
     }
 
 
