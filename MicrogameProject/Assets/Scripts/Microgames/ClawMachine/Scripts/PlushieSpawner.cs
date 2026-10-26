@@ -35,7 +35,11 @@ public class PlushieSpawner : MonoBehaviour
     public void SpawnPlush()
     {
         int plushieIndex = UnityEngine.Random.Range(1, 5);
-        Instantiate(plushieList[plushieIndex]);
+        int SpawnLocationX = 0;
+        int SpawnLocationY = 0;
+        int SpawnLocationZ = 0;
+        Vector3 SpawnLocation = new Vector3(SpawnLocationX, SpawnLocationY, SpawnLocationZ);
+        Instantiate(plushieList[plushieIndex], SpawnLocation, Quaternion.identity);
         Debug.Log("Spawns Attempted");
 
     }
