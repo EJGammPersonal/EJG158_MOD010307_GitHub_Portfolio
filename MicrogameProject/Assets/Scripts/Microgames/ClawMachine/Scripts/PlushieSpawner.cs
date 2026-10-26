@@ -15,6 +15,7 @@ public class PlushieSpawner : MonoBehaviour
     public GameObject PlushieTrio;
     public GameObject PlushieBig;
     public GameObject PlushieLegendary;
+    public Transform spawnLocation;
 
     public int SpawnQuality; 
     public int SpawnCount;
@@ -35,11 +36,11 @@ public class PlushieSpawner : MonoBehaviour
     public void SpawnPlush()
     {
         int plushieIndex = UnityEngine.Random.Range(1, 5);
-        int SpawnLocationX = 0;
-        int SpawnLocationY = 0;
-        int SpawnLocationZ = 0;
-        Vector3 SpawnLocation = new Vector3(SpawnLocationX, SpawnLocationY, SpawnLocationZ);
-        Instantiate(plushieList[plushieIndex], SpawnLocation, Quaternion.identity);
+        // int SpawnLocationX = 0;
+        // int SpawnLocationY = 0;
+        // int SpawnLocationZ = 0;
+        // Vector3 SpawnLocation = new Vector3(SpawnLocationX, SpawnLocationY, SpawnLocationZ);
+        Instantiate(plushieList[plushieIndex], spawnLocation.position, Quaternion.identity);
         Debug.Log("Spawns Attempted");
 
     }
