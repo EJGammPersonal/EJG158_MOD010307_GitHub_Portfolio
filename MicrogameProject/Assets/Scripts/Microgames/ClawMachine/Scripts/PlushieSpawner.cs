@@ -43,18 +43,18 @@ public class PlushieSpawner : MonoBehaviour
         
     }
 
-    public void Start()
-    {
-        plushieList.Add(PlushieSingle);
-        plushieList.Add(PlushieDuo);
-        plushieList.Add(PlushieTrio);
-        plushieList.Add(PlushieBig);
-        plushieList.Add(PlushieLegendary);
+    // public void Start()
+    // {
+    //     plushieList.Add(PlushieSingle);
+    //     plushieList.Add(PlushieDuo);
+    //     plushieList.Add(PlushieTrio);
+    //     plushieList.Add(PlushieBig);
+    //     plushieList.Add(PlushieLegendary);
 
-        int plushieIndex = UnityEngine.Random.Range(1, 5);
-        Instantiate(plushieList[plushieIndex], spawnLocation.position, Quaternion.identity);
-        Debug.Log("Spawns Attempted");
-    }
+    //     int plushieIndex = UnityEngine.Random.Range(1, 5);
+    //     Instantiate(plushieList[plushieIndex], spawnLocation.position, Quaternion.identity);
+    //     Debug.Log("Spawns Attempted");
+    // }
     // public void SpawnPlush()
     // {
     //     int plushieIndex = UnityEngine.Random.Range(1, 5);
