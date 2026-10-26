@@ -16,11 +16,33 @@ public class PlushieSpawner : MonoBehaviour
     public GameObject PlushieBig;
     public GameObject PlushieLegendary;
     public Transform spawnLocation;
-
     public int SpawnQuality; 
     public int SpawnCount;
     public bool GameOn;
-   
+    
+    public int plushieIndex(int[] weight)
+    {
+        if(weight == null || weight.Length == 0) return -1;
+        int rarity;
+        int weightSum = 0;
+        for(rarity = 0; rarity < weight.Length; rarity++)
+        {
+            if(weight[rarity] >= 0) weightSum += weight[rarity];
+        }
+
+        float random = UnityEngine.Random.value;
+        float score = 0f;
+
+        for (rarity = 0; rarity < weight.Length; rarity++)
+        {
+            if(weight[rarity] <= 0f) continue; 
+            score += (float)weight[rarity] / weightSum; 
+            if (score >= random) return rarity; 
+        }
+        return -1; 
+        
+    }
+
     public void Start()
     {
         plushieList.Add(PlushieSingle);
@@ -28,11 +50,11 @@ public class PlushieSpawner : MonoBehaviour
         plushieList.Add(PlushieTrio);
         plushieList.Add(PlushieBig);
         plushieList.Add(PlushieLegendary);
+
         int plushieIndex = UnityEngine.Random.Range(1, 5);
         Instantiate(plushieList[plushieIndex], spawnLocation.position, Quaternion.identity);
         Debug.Log("Spawns Attempted");
     }
-    
     // public void SpawnPlush()
     // {
     //     int plushieIndex = UnityEngine.Random.Range(1, 5);
@@ -44,6 +66,8 @@ public class PlushieSpawner : MonoBehaviour
     //     Debug.Log("Spawns Attempted");
 
     // }
+
+
 
 
 }
