@@ -33,7 +33,7 @@ public class ClawMachineGame : MicrogameBehaviour
             
         }
 
-    public void RingsCollected()
+    public void tokensLeft()
         {
             if (!isRunning) return;
 

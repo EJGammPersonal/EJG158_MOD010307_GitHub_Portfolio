@@ -266,6 +266,96 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::MyButton
   buttonPressed: 0
+--- !u!1 &53921578
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 53921579}
+  m_Layer: 0
+  m_Name: PlushieSpawners
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &53921579
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 53921578}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0.4171, y: -0.50617, z: 1.98}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 2016499175}
+  - {fileID: 1121592967}
+  - {fileID: 308573803}
+  - {fileID: 103408371}
+  - {fileID: 1416494657}
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &103408369
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 103408371}
+  - component: {fileID: 103408370}
+  m_Layer: 0
+  m_Name: SpawnPointFour
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &103408370
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 103408369}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 577b661448e2b1b46ba3a6498c65e88b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::PlushieSpawner
+  PlushieSingle: {fileID: 1200106392254972005, guid: 1d90ffa1417678140b79c38d82995b8d, type: 3}
+  PlushieDuo: {fileID: 2262430051389081891, guid: a36ca70e9b0648647a4fa117e9bea54d, type: 3}
+  PlushieTrio: {fileID: 6445301882884957565, guid: 7737c649184054e4bb833cabc509fbe1, type: 3}
+  PlushieBig: {fileID: 7600814676510201308, guid: 07d68b5ebb192174199b4f93a9344f91, type: 3}
+  PlushieLegendary: {fileID: 1569284847993538447, guid: 979eef28a4284d84690a4e2c407bf534, type: 3}
+  spawnLocation: {fileID: 103408371}
+  SpawnQuality: 0
+  SpawnCount: 0
+  GameOn: 0
+  weightedChance: 32000000140000000f0000000a00000005000000
+--- !u!4 &103408371
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 103408369}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 27.562899, y: 0.50617, z: -1.98}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 53921579}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &109763740
 GameObject:
   m_ObjectHideFlags: 0
@@ -339,7 +429,7 @@ Transform:
   m_GameObject: {fileID: 109763740}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 6.98, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -575,6 +665,11 @@ MonoBehaviour:
   tokens: 3
   ClawButton: {fileID: 41970026}
   ClawDownButton: {fileID: 1199502468}
+--- !u!4 &290615295 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 5985904989466137299, guid: 15285b288aac2cc4596b505a6eb22f71, type: 3}
+  m_PrefabInstance: {fileID: 1728682972181768001}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &308573802
 GameObject:
   m_ObjectHideFlags: 0
@@ -600,12 +695,12 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 308573802}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 10.92, y: 0, z: 0}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 20.222898, y: 0.50617, z: -1.98}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 0}
+  m_Father: {fileID: 53921579}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &308573804
 MonoBehaviour:
@@ -624,9 +719,11 @@ MonoBehaviour:
   PlushieTrio: {fileID: 6445301882884957565, guid: 7737c649184054e4bb833cabc509fbe1, type: 3}
   PlushieBig: {fileID: 7600814676510201308, guid: 07d68b5ebb192174199b4f93a9344f91, type: 3}
   PlushieLegendary: {fileID: 1569284847993538447, guid: 979eef28a4284d84690a4e2c407bf534, type: 3}
+  spawnLocation: {fileID: 308573803}
   SpawnQuality: 0
   SpawnCount: 0
   GameOn: 0
+  weightedChance: 32000000140000000f0000000a00000005000000
 --- !u!1 &376692251
 GameObject:
   m_ObjectHideFlags: 0
@@ -655,8 +752,8 @@ Transform:
   m_GameObject: {fileID: 376692251}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -3.3346999, y: 0.48568, z: 5.75434}
-  m_LocalScale: {x: 19.78, y: 12.49, z: 1}
+  m_LocalPosition: {x: 6.1, y: 0.48568, z: 5.75434}
+  m_LocalScale: {x: 47.3, y: 12.49, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1070520518}
@@ -707,7 +804,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: ac32b72eb74c1ee4f82a146840819e3e, type: 2}
+  - {fileID: 2100000, guid: 3f4e88f35b76cba4ebd6209fc946bfab, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -1106,8 +1203,8 @@ Transform:
   m_GameObject: {fileID: 729179767}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.56565, y: 3.45, z: 3.27434}
-  m_LocalScale: {x: 14.28, y: 0.14, z: 4.16}
+  m_LocalPosition: {x: 7.13, y: 3.45, z: 3.27434}
+  m_LocalScale: {x: 29.6, y: 0.14, z: 4.16}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1070520518}
@@ -1479,12 +1576,12 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1121592966}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 5.39, y: 0, z: 0}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 10.5029, y: 0.50617, z: -1.98}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 0}
+  m_Father: {fileID: 53921579}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1121592968
 MonoBehaviour:
@@ -1503,9 +1600,11 @@ MonoBehaviour:
   PlushieTrio: {fileID: 6445301882884957565, guid: 7737c649184054e4bb833cabc509fbe1, type: 3}
   PlushieBig: {fileID: 7600814676510201308, guid: 07d68b5ebb192174199b4f93a9344f91, type: 3}
   PlushieLegendary: {fileID: 1569284847993538447, guid: 979eef28a4284d84690a4e2c407bf534, type: 3}
+  spawnLocation: {fileID: 1121592967}
   SpawnQuality: 0
   SpawnCount: 0
   GameOn: 0
+  weightedChance: 32000000140000000f0000000a00000005000000
 --- !u!1 &1144224835
 GameObject:
   m_ObjectHideFlags: 0
@@ -1927,6 +2026,92 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1245953584}
   m_CullTransparentMesh: 1
+--- !u!1 &1416494655
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1416494657}
+  - component: {fileID: 1416494656}
+  m_Layer: 0
+  m_Name: SpawnPointFive
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1416494656
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1416494655}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 577b661448e2b1b46ba3a6498c65e88b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::PlushieSpawner
+  PlushieSingle: {fileID: 1200106392254972005, guid: 1d90ffa1417678140b79c38d82995b8d, type: 3}
+  PlushieDuo: {fileID: 2262430051389081891, guid: a36ca70e9b0648647a4fa117e9bea54d, type: 3}
+  PlushieTrio: {fileID: 6445301882884957565, guid: 7737c649184054e4bb833cabc509fbe1, type: 3}
+  PlushieBig: {fileID: 7600814676510201308, guid: 07d68b5ebb192174199b4f93a9344f91, type: 3}
+  PlushieLegendary: {fileID: 1569284847993538447, guid: 979eef28a4284d84690a4e2c407bf534, type: 3}
+  spawnLocation: {fileID: 1416494657}
+  SpawnQuality: 0
+  SpawnCount: 0
+  GameOn: 0
+  weightedChance: 32000000140000000f0000000a00000005000000
+--- !u!4 &1416494657
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1416494655}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 38.6729, y: 0.50617, z: -1.98}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 53921579}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1441497414 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5939213980887691579, guid: b2e14c926a19a1c4aa2e44ee22bc9410, type: 3}
+  m_PrefabInstance: {fileID: 2125258950892311514}
+  m_PrefabAsset: {fileID: 0}
+--- !u!54 &1441497419
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1441497414}
+  serializedVersion: 5
+  m_Mass: 1
+  m_LinearDamping: 0
+  m_AngularDamping: 0.05
+  m_CenterOfMass: {x: 0, y: 0, z: 0}
+  m_InertiaTensor: {x: 1, y: 1, z: 1}
+  m_InertiaRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ImplicitCom: 1
+  m_ImplicitTensor: 1
+  m_UseGravity: 1
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 116
+  m_CollisionDetection: 0
 --- !u!1 &1604580281
 GameObject:
   m_ObjectHideFlags: 0
@@ -2092,8 +2277,8 @@ Transform:
   m_GameObject: {fileID: 1656195884}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.56565, y: 4.49, z: 3.27434}
-  m_LocalScale: {x: 14.28, y: 1, z: 4.16}
+  m_LocalPosition: {x: 6.66, y: 4.49, z: 3.27434}
+  m_LocalScale: {x: 28.29, y: 1, z: 4.16}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1070520518}
@@ -2337,8 +2522,8 @@ Transform:
   m_GameObject: {fileID: 1790706279}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 3.3556502, y: -4, z: 3.27434}
-  m_LocalScale: {x: 14.28, y: 4.42, z: 4.16}
+  m_LocalPosition: {x: 9, y: -4, z: 3.27434}
+  m_LocalScale: {x: 25.3, y: 4.42, z: 4.16}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1070520518}
@@ -2635,6 +2820,43 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1863321711}
   m_CullTransparentMesh: 1
+--- !u!1 &1864871515 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 3733582962384185770, guid: b2e14c926a19a1c4aa2e44ee22bc9410, type: 3}
+  m_PrefabInstance: {fileID: 2125258950892311514}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &1864871516 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 3040570245728336152, guid: b2e14c926a19a1c4aa2e44ee22bc9410, type: 3}
+  m_PrefabInstance: {fileID: 2125258950892311514}
+  m_PrefabAsset: {fileID: 0}
+--- !u!54 &1864871517
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1864871515}
+  serializedVersion: 5
+  m_Mass: 1
+  m_LinearDamping: 0
+  m_AngularDamping: 0.05
+  m_CenterOfMass: {x: 0, y: 0, z: 0}
+  m_InertiaTensor: {x: 1, y: 1, z: 1}
+  m_InertiaRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ImplicitCom: 1
+  m_ImplicitTensor: 1
+  m_UseGravity: 1
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 116
+  m_CollisionDetection: 0
 --- !u!1 &1946587509
 GameObject:
   m_ObjectHideFlags: 0
@@ -2848,12 +3070,12 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2016499174}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 1.75, y: 0, z: 0}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 3.8228998, y: 0.50617, z: -1.98}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 0}
+  m_Father: {fileID: 53921579}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &2016499176
 MonoBehaviour:
@@ -2872,9 +3094,11 @@ MonoBehaviour:
   PlushieTrio: {fileID: 6445301882884957565, guid: 7737c649184054e4bb833cabc509fbe1, type: 3}
   PlushieBig: {fileID: 7600814676510201308, guid: 07d68b5ebb192174199b4f93a9344f91, type: 3}
   PlushieLegendary: {fileID: 1569284847993538447, guid: 979eef28a4284d84690a4e2c407bf534, type: 3}
+  spawnLocation: {fileID: 2016499175}
   SpawnQuality: 0
   SpawnCount: 0
   GameOn: 0
+  weightedChance: 32000000140000000f0000000a00000005000000
 --- !u!1 &2023735734
 GameObject:
   m_ObjectHideFlags: 0
@@ -3205,7 +3429,10 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
-    m_AddedGameObjects: []
+    m_AddedGameObjects:
+    - targetCorrespondingSourceObject: {fileID: 5985904989466137299, guid: 15285b288aac2cc4596b505a6eb22f71, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1864871516}
     m_AddedComponents:
     - targetCorrespondingSourceObject: {fileID: 899105843079045204, guid: 15285b288aac2cc4596b505a6eb22f71, type: 3}
       insertIndex: -1
@@ -3220,15 +3447,15 @@ PrefabInstance:
   serializedVersion: 2
   m_Modification:
     serializedVersion: 3
-    m_TransformParent: {fileID: 0}
+    m_TransformParent: {fileID: 290615295}
     m_Modifications:
     - target: {fileID: 3040570245728336152, guid: b2e14c926a19a1c4aa2e44ee22bc9410, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0
+      value: 1.44
       objectReference: {fileID: 0}
     - target: {fileID: 3040570245728336152, guid: b2e14c926a19a1c4aa2e44ee22bc9410, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0
+      value: -2.4
       objectReference: {fileID: 0}
     - target: {fileID: 3040570245728336152, guid: b2e14c926a19a1c4aa2e44ee22bc9410, type: 3}
       propertyPath: m_LocalPosition.z
@@ -3269,7 +3496,13 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 3733582962384185770, guid: b2e14c926a19a1c4aa2e44ee22bc9410, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1864871517}
+    - targetCorrespondingSourceObject: {fileID: 5939213980887691579, guid: b2e14c926a19a1c4aa2e44ee22bc9410, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1441497419}
   m_SourcePrefab: {fileID: 100100000, guid: b2e14c926a19a1c4aa2e44ee22bc9410, type: 3}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
@@ -3277,11 +3510,8 @@ SceneRoots:
   m_Roots:
   - {fileID: 152705281}
   - {fileID: 1070520518}
-  - {fileID: 2125258950892311514}
   - {fileID: 1728682972181768001}
-  - {fileID: 2016499175}
-  - {fileID: 1121592967}
-  - {fileID: 308573803}
   - {fileID: 390443653}
   - {fileID: 109763743}
   - {fileID: 2000798823}
+  - {fileID: 53921579}

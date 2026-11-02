@@ -52,19 +52,20 @@ public class PlushieSpawner : MonoBehaviour
         plushieList.Add(PlushieBig);
         plushieList.Add(PlushieLegendary);
 
-        int plushieIndex = UnityEngine.Random.Range(1, 5);
-        Instantiate(plushieList[plushieIndex], spawnLocation.position, Quaternion.identity);
+        // int plushieIndex = UnityEngine.Random.Range(1, 5);
+        // Instantiate(plushieList[plushieIndex], spawnLocation.position, Quaternion.identity);
+        SpawnPlush();
         Debug.Log("Spawns Attempted");
     }
     public void SpawnPlush()
     {
-        int plushieIndex = UnityEngine.Random.Range(1, 5);
-        int SpawnLocationX = 0;
-        int SpawnLocationY = 0;
-        int SpawnLocationZ = 0;
+        int plushieIndex = UnityEngine.Random.Range(0, 4);
+        // int SpawnLocationX = 0;
+        // int SpawnLocationY = 0;
+        // int SpawnLocationZ = 0;
         int QualityOffset = 0;
-        Vector3 SpawnLocation = new Vector3(SpawnLocationX, SpawnLocationY, SpawnLocationZ);
-        Instantiate(plushieList[plushieIndex], spawnLocation.position, Quaternion.identity);
+        // Vector3 spawnLocation = new Vector3(SpawnLocationX, SpawnLocatInstantiate(plushieList[plushieIndex], spawnLocation.position, Quaternion.identity);ionY, SpawnLocationZ);
+        // 
         Debug.Log("Spawns Attempted");
 
        SpawnQuality = UnityEngine.Random.Range(1, 100); 
@@ -73,7 +74,7 @@ public class PlushieSpawner : MonoBehaviour
        {
         if (SpawnQuality <= weightedChance[i] + QualityOffset)
         {
-            Instantiate(plushieList[i]);
+            Instantiate(plushieList[i], spawnLocation.position, Quaternion.identity);
             return;
         }
          QualityOffset += weightedChance[i];
