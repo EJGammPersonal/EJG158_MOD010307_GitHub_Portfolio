@@ -1,2 +1,23 @@
 fileFormatVersion: 2
 guid: c8f0ad6fa0c7bdb4ea2d1b6396e33dc0
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences:
+  - Cherry: {fileID: 5593139540855034073, guid: edcedde63fa65584fad61b128fea3cee, type: 3}
+  - Melon: {fileID: 8334469228997856100, guid: b898edfa08b16b64dba7e72305f4ddda, type: 3}
+  - Lemon: {fileID: 1826709441488324620, guid: 1ba20fbc7d157784987bec2baee5ed40, type: 3}
+  - Heart: {fileID: 8869408791909736835, guid: 2a08b597d92b1d840a24260d26bcc03d, type: 3}
+  - Bar: {fileID: 7412655029592669681, guid: d47bc25f506395840afc5cfbf644a310, type: 3}
+  - BarBar: {fileID: 1036601512755382443, guid: 8c2f738baa69cb749967e577cc3b01d9, type: 3}
+  - BarBarBar: {fileID: 4639157960421404396, guid: ea96695a5ffe8f040b0b484ed9651121, type: 3}
+  - Cleat: {fileID: 8556553783144643609, guid: 070d38368ff6b9b4a9f4ed7d07712258, type: 3}
+  - Bell: {fileID: 1105107847348828848, guid: 2dcb98893cf0fa74085eed1db1f4ce8a, type: 3}
+  - Clover: {fileID: 5601789443508201696, guid: 5dba047e7b3146242a45d260e6e25479, type: 3}
+  - Sevens: {fileID: 5328053369396768521, guid: e6efd5d1e9f0b9646bf596121dffe688, type: 3}
+  - SwitchDown: {instanceID: 0}
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
