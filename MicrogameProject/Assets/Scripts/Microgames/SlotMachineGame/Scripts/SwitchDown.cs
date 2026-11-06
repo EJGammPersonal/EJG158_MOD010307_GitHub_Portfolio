@@ -9,13 +9,19 @@ public class SwitchDown : MonoBehaviour
     public GameObject SlotOne;
     public GameObject SlotTwo;
     public GameObject SlotThree;
-    public SlotMachine slotSpinResult;
+
+
+
+    public SlotMachine SlotMachine;
     public void Update()
     {
-        if (Mouse.current.leftButton.isPressed == true)
+
+
+        if (Keyboard.current.spaceKey.isPressed == true)
         {
-            slotSpinResult.Switch = true;
-        }
-        
+            SlotMachine.Switch = true;
+
+
+            }
     }
 }

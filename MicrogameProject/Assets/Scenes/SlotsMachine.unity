@@ -306,6 +306,7 @@ GameObject:
   m_Component:
   - component: {fileID: 265595989}
   - component: {fileID: 265595988}
+  - component: {fileID: 265595990}
   - component: {fileID: 265595987}
   - component: {fileID: 265595986}
   m_Layer: 0
@@ -408,6 +409,85 @@ Transform:
   m_Children:
   - {fileID: 230588017}
   m_Father: {fileID: 129569473}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &265595990
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 265595985}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c8f0ad6fa0c7bdb4ea2d1b6396e33dc0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::SlotMachine
+  GameOn: 0
+  SlotValue: 0
+  SlotSpinCount: 0
+  Cherry: {fileID: 5593139540855034073, guid: edcedde63fa65584fad61b128fea3cee, type: 3}
+  Melon: {fileID: 8334469228997856100, guid: b898edfa08b16b64dba7e72305f4ddda, type: 3}
+  Lemon: {fileID: 1826709441488324620, guid: 1ba20fbc7d157784987bec2baee5ed40, type: 3}
+  Heart: {fileID: 8869408791909736835, guid: 2a08b597d92b1d840a24260d26bcc03d, type: 3}
+  Bar: {fileID: 7412655029592669681, guid: d47bc25f506395840afc5cfbf644a310, type: 3}
+  BarBar: {fileID: 1036601512755382443, guid: 8c2f738baa69cb749967e577cc3b01d9, type: 3}
+  BarBarBar: {fileID: 4639157960421404396, guid: ea96695a5ffe8f040b0b484ed9651121, type: 3}
+  Cleat: {fileID: 8556553783144643609, guid: 070d38368ff6b9b4a9f4ed7d07712258, type: 3}
+  Bell: {fileID: 1105107847348828848, guid: 2dcb98893cf0fa74085eed1db1f4ce8a, type: 3}
+  Clover: {fileID: 5601789443508201696, guid: 5dba047e7b3146242a45d260e6e25479, type: 3}
+  Sevens: {fileID: 5328053369396768521, guid: e6efd5d1e9f0b9646bf596121dffe688, type: 3}
+  Switch: 0
+  slotLocation: {fileID: 230588017}
+  SlotSprites: []
+  weightedChance: 0f0000000f0000000f0000000f0000000f0000000a0000000500000005000000020000000200000001000000
+--- !u!1 &730807073
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 730807075}
+  - component: {fileID: 730807074}
+  m_Layer: 0
+  m_Name: SlotMachineGame
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &730807074
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 730807073}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a1270d89554ce164bb34d57528ab021b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::MicrogameCourse.Microgames.SlotMachineGame
+  playArea: {fileID: 0}
+  progressText: {fileID: 0}
+  pointsRemaining: 5
+  pointsLeft: 0
+  SlotMachine: {fileID: 0}
+--- !u!4 &730807075
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 730807073}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: -0.54}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &993475552
 GameObject:
@@ -537,7 +617,7 @@ MonoBehaviour:
   SlotOne: {fileID: 207880286}
   SlotTwo: {fileID: 1481323750}
   SlotThree: {fileID: 230588016}
-  SlotMachine: {fileID: 0}
+  slotSpinResult: {fileID: 0}
 --- !u!1 &1467717034
 GameObject:
   m_ObjectHideFlags: 0
@@ -548,6 +628,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1467717038}
   - component: {fileID: 1467717037}
+  - component: {fileID: 1467717039}
   - component: {fileID: 1467717036}
   - component: {fileID: 1467717035}
   m_Layer: 0
@@ -651,6 +732,36 @@ Transform:
   - {fileID: 1481323751}
   m_Father: {fileID: 129569473}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1467717039
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1467717034}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c8f0ad6fa0c7bdb4ea2d1b6396e33dc0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::SlotMachine
+  GameOn: 0
+  SlotValue: 0
+  SlotSpinCount: 0
+  Cherry: {fileID: 5593139540855034073, guid: edcedde63fa65584fad61b128fea3cee, type: 3}
+  Melon: {fileID: 8334469228997856100, guid: b898edfa08b16b64dba7e72305f4ddda, type: 3}
+  Lemon: {fileID: 1826709441488324620, guid: 1ba20fbc7d157784987bec2baee5ed40, type: 3}
+  Heart: {fileID: 8869408791909736835, guid: 2a08b597d92b1d840a24260d26bcc03d, type: 3}
+  Bar: {fileID: 7412655029592669681, guid: d47bc25f506395840afc5cfbf644a310, type: 3}
+  BarBar: {fileID: 1036601512755382443, guid: 8c2f738baa69cb749967e577cc3b01d9, type: 3}
+  BarBarBar: {fileID: 4639157960421404396, guid: ea96695a5ffe8f040b0b484ed9651121, type: 3}
+  Cleat: {fileID: 8556553783144643609, guid: 070d38368ff6b9b4a9f4ed7d07712258, type: 3}
+  Bell: {fileID: 1105107847348828848, guid: 2dcb98893cf0fa74085eed1db1f4ce8a, type: 3}
+  Clover: {fileID: 5601789443508201696, guid: 5dba047e7b3146242a45d260e6e25479, type: 3}
+  Sevens: {fileID: 5328053369396768521, guid: e6efd5d1e9f0b9646bf596121dffe688, type: 3}
+  Switch: 0
+  slotLocation: {fileID: 1481323751}
+  SlotSprites: []
+  weightedChance: 0f0000000f0000000f0000000f0000000f0000000a0000000500000005000000020000000200000001000000
 --- !u!1 &1481323750
 GameObject:
   m_ObjectHideFlags: 0
@@ -803,6 +914,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1918352798}
+  - component: {fileID: 1918352799}
   - component: {fileID: 1918352797}
   - component: {fileID: 1918352796}
   - component: {fileID: 1918352795}
@@ -907,6 +1019,36 @@ Transform:
   - {fileID: 207880287}
   m_Father: {fileID: 129569473}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1918352799
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1918352794}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c8f0ad6fa0c7bdb4ea2d1b6396e33dc0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::SlotMachine
+  GameOn: 0
+  SlotValue: 0
+  SlotSpinCount: 0
+  Cherry: {fileID: 5593139540855034073, guid: edcedde63fa65584fad61b128fea3cee, type: 3}
+  Melon: {fileID: 8334469228997856100, guid: b898edfa08b16b64dba7e72305f4ddda, type: 3}
+  Lemon: {fileID: 1826709441488324620, guid: 1ba20fbc7d157784987bec2baee5ed40, type: 3}
+  Heart: {fileID: 8869408791909736835, guid: 2a08b597d92b1d840a24260d26bcc03d, type: 3}
+  Bar: {fileID: 7412655029592669681, guid: d47bc25f506395840afc5cfbf644a310, type: 3}
+  BarBar: {fileID: 1036601512755382443, guid: 8c2f738baa69cb749967e577cc3b01d9, type: 3}
+  BarBarBar: {fileID: 4639157960421404396, guid: ea96695a5ffe8f040b0b484ed9651121, type: 3}
+  Cleat: {fileID: 8556553783144643609, guid: 070d38368ff6b9b4a9f4ed7d07712258, type: 3}
+  Bell: {fileID: 1105107847348828848, guid: 2dcb98893cf0fa74085eed1db1f4ce8a, type: 3}
+  Clover: {fileID: 5601789443508201696, guid: 5dba047e7b3146242a45d260e6e25479, type: 3}
+  Sevens: {fileID: 5328053369396768521, guid: e6efd5d1e9f0b9646bf596121dffe688, type: 3}
+  Switch: 0
+  slotLocation: {fileID: 207880287}
+  SlotSprites: []
+  weightedChance: 0f0000000f0000000f0000000f0000000f0000000a0000000500000005000000020000000200000001000000
 --- !u!1 &2024595264
 GameObject:
   m_ObjectHideFlags: 0
@@ -1165,3 +1307,4 @@ SceneRoots:
   - {fileID: 2024595267}
   - {fileID: 129569473}
   - {fileID: 2061417515}
+  - {fileID: 730807075}

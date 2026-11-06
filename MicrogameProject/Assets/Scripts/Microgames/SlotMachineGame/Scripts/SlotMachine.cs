@@ -48,7 +48,7 @@ public class SlotMachine : MonoBehaviour
         SlotResults.Add(Clover);
         SlotResults.Add(Sevens);
 
-
+        GameOn = true;
 
         Debug.Log("SpinsAttempted");
     }
