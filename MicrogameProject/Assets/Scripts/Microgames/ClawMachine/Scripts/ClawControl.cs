@@ -12,13 +12,18 @@ public class ClawControl : MonoBehaviour
     public bool ClawDownPressed;
     public bool ClawUsedThisTurn;
     public bool ClawDownThisTurn;
+    public bool ClawUpThisTurn;
     public bool ClawDownInput;
+    public bool ClawUpInput;
     public int tokens;
     public MyButton ClawButton;
     public MyButton ClawDownButton;
 
+    public MyButton ClawUpButton;
+    public ClawAnimationScripts ClawAnimation;
+    public Animator anim;
     Rigidbody rb;
-    Animator anim;
+
 
     void Awake()
     {
@@ -43,8 +48,25 @@ public class ClawControl : MonoBehaviour
             ClawDownPressed = true;
             ClawDownThisTurn = true;
             rb.AddRelativeForce(-20,-20,0);
+            anim.SetTrigger("Action");
         }
 
+        if (Keyboard.current.wKey.isPressed == true && ClawMovePressed == true  && ClawDownThisTurn == true || ClawUpButton.buttonPressed == true && ClawMovePressed == true && ClawDownThisTurn == true)
+        {   
+            ClawUpThisTurn = true;
+            rb.AddRelativeForce(0,30,0);
+        }
+
+
+        if (Keyboard.current.gKey.isPressed == true && ClawMovePressed == true && ClawDownThisTurn == true)
+        {   
+            anim.SetTrigger("Grab");
+            ClawMovePressed = false;
+            ClawDownPressed = false;
+            ClawUsedThisTurn = false;
+            ClawDownThisTurn = false;
+            rb.AddRelativeForce(0,20,0);
+        }
        }
     
     }
@@ -62,22 +84,34 @@ public class ClawControl : MonoBehaviour
     {
         if (ClawDownInput == true && ClawMovePressed == true && ClawDownThisTurn == false)
         {
+            Debug.Log("Claw Down");
             rb.AddRelativeForce(-20,-20,0);
             ClawDownThisTurn = true;
             anim.SetTrigger("Action");
+            
         }
 
     }
 
-    public void OnCollisionEnter(Collision collision)
+    public void ClawMoveUp()
     {
-        if (collision.gameObject.CompareTag("Plushie"))
+        if (ClawUpInput == true && ClawMovePressed == true && ClawDownThisTurn == true)
         {
-            Debug.Log("Plushie Caught!");
-
-
+            rb.AddRelativeForce(0,30,0);
+            ClawUpThisTurn = true;  
         }
+
     }
+
+    // public void OnCollisionEnter(Collision collision)
+    // {
+    //     if (collision.gameObject.CompareTag("Plushie"))
+    //     {
+    //         Debug.Log("Plushie Caught!");
+
+
+    //     }
+    // }
 
 }
 

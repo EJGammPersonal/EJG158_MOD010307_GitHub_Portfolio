@@ -20,6 +20,7 @@ public class ClawMachineGame : MicrogameBehaviour
 
     public ClawControl clawControl;
     public PlushieSpawner plushieSpawner;
+    
 
     public int pointsLeft;
 
