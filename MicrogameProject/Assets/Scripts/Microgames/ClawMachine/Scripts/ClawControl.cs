@@ -18,6 +18,7 @@ public class ClawControl : MonoBehaviour
     public MyButton ClawDownButton;
 
     Rigidbody rb;
+    Animator anim;
 
     void Awake()
     {
@@ -63,6 +64,7 @@ public class ClawControl : MonoBehaviour
         {
             rb.AddRelativeForce(-20,-20,0);
             ClawDownThisTurn = true;
+            anim.SetTrigger("Action");
         }
 
     }
@@ -72,7 +74,7 @@ public class ClawControl : MonoBehaviour
         if (collision.gameObject.CompareTag("Plushie"))
         {
             Debug.Log("Plushie Caught!");
-            
+
 
         }
     }
