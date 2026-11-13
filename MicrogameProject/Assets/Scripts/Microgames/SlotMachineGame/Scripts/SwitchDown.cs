@@ -19,9 +19,7 @@ public class SwitchDown : MonoBehaviour
 
         if (Keyboard.current.spaceKey.isPressed == true)
         {
-            SlotMachine.Switch = true;
-
-
-            }
+            SlotMachine.SwitchUsed();
+        }
     }
 }

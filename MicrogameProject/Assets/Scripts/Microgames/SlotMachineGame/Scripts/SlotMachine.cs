@@ -55,12 +55,10 @@ public class SlotMachine : MonoBehaviour
 
     public void SwitchUsed()
     {
-        if (GameOn == true && SlotSpinCount > 0 && Switch == true)
-        
         {
             ShowResults();
             SlotSpinCount--;
-            Switch = false;
+            Switch = true;
         }
         
     }
