@@ -13,6 +13,8 @@ public class SwitchDown : MonoBehaviour
 
 
     public SlotMachine SlotMachine;
+    public SlotMachine2 SlotMachine2;
+    public SlotMachine3 SlotMachine3;
     public void Update()
     {
 
@@ -20,6 +22,8 @@ public class SwitchDown : MonoBehaviour
         if (Keyboard.current.spaceKey.isPressed == true)
         {
             SlotMachine.SwitchUsed();
+            SlotMachine2.SwitchUsed();
+            SlotMachine3.SwitchUsed();
         }
     }
 }
