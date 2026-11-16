@@ -27,6 +27,7 @@ public class SlotMachine3 : MonoBehaviour
     public GameObject Sevens;
     public bool Switch = false;
     public Transform slotLocation;
+    public GameObject SlotCylinder3;
     
     [SerializeField] private GameObject[] SlotSprites;
     List<GameObject> SlotResults = new List<GameObject>();
@@ -65,6 +66,7 @@ public class SlotMachine3 : MonoBehaviour
     public void ShowResults()
 
     {
+        SlotCylinder3.SetActive(false);
         int QualityOffset = 0;
         SlotValue = UnityEngine.Random.Range(1, 100); 
 

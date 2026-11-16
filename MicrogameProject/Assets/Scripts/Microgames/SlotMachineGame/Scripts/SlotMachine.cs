@@ -25,6 +25,7 @@ public class SlotMachine : MonoBehaviour
     public GameObject Bell;
     public GameObject Clover;
     public GameObject Sevens;
+    public GameObject SlotCylinder;
     public bool Switch = false;
     public Transform slotLocation;
     
@@ -65,6 +66,7 @@ public class SlotMachine : MonoBehaviour
     public void ShowResults()
 
     {
+        SlotCylinder.SetActive(false);
         int QualityOffset = 0;
         SlotValue = UnityEngine.Random.Range(1, 100); 
 
