@@ -331,7 +331,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 577b661448e2b1b46ba3a6498c65e88b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PlushieSpawner
-  PlushieSingle: {fileID: 87883685673523143, guid: 9e4a6ea7ff084e34199ca7a30e5da4e7, type: 3}
+  PlushieSingle: {fileID: 4303740543820332924, guid: 98c5e14270ce99d44a2474018c2ef6be, type: 3}
   PlushieDuo: {fileID: 2262430051389081891, guid: a36ca70e9b0648647a4fa117e9bea54d, type: 3}
   PlushieTrio: {fileID: 1293603098368256694, guid: aaa33dcab7e55854b839469669640386, type: 3}
   PlushieBig: {fileID: 7600814676510201308, guid: 07d68b5ebb192174199b4f93a9344f91, type: 3}
@@ -611,6 +611,53 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &206609720 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 408189300939885270, guid: 2f5d0b34cedfc4d4a9d753abcc1bb1f5, type: 3}
+  m_PrefabInstance: {fileID: 4247520087092341666}
+  m_PrefabAsset: {fileID: 0}
+--- !u!65 &206609724
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 206609720}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 3.7408795, y: 0.4670006, z: 1}
+  m_Center: {x: -0.0334467, y: 3.1034324, z: 0}
+--- !u!65 &206609725
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 206609720}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 1.7943877, y: 1.5437329, z: 1}
+  m_Center: {x: 0.030287206, y: 2.6291559, z: 0}
 --- !u!1 &308573802
 GameObject:
   m_ObjectHideFlags: 0
@@ -655,7 +702,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 577b661448e2b1b46ba3a6498c65e88b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PlushieSpawner
-  PlushieSingle: {fileID: 87883685673523143, guid: 9e4a6ea7ff084e34199ca7a30e5da4e7, type: 3}
+  PlushieSingle: {fileID: 4303740543820332924, guid: 98c5e14270ce99d44a2474018c2ef6be, type: 3}
   PlushieDuo: {fileID: 2262430051389081891, guid: a36ca70e9b0648647a4fa117e9bea54d, type: 3}
   PlushieTrio: {fileID: 1293603098368256694, guid: aaa33dcab7e55854b839469669640386, type: 3}
   PlushieBig: {fileID: 7600814676510201308, guid: 07d68b5ebb192174199b4f93a9344f91, type: 3}
@@ -1203,7 +1250,7 @@ Rigidbody:
     m_Bits: 0
   m_ImplicitCom: 1
   m_ImplicitTensor: 1
-  m_UseGravity: 1
+  m_UseGravity: 0
   m_IsKinematic: 0
   m_Interpolate: 0
   m_Constraints: 0
@@ -1227,8 +1274,8 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 0.0028081099, y: 0.011998278, z: 0.0028810515}
-  m_Center: {x: 0.0005444407, y: 0.0035018576, z: 0.0094521595}
+  m_Size: {x: 0.0028081103, y: 0.01534378, z: 0.0028810522}
+  m_Center: {x: 0.0005444408, y: 0.0052407673, z: 0.0098069785}
 --- !u!65 &930649567
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -1248,8 +1295,8 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 0.02947568, y: 0.0044181864, z: 0.02250432}
-  m_Center: {x: 0.001394612, y: -0.00028759163, z: -0.0029900677}
+  m_Size: {x: 0.0028189952, y: 0.004418187, z: 0.020912388}
+  m_Center: {x: 0.00081800314, y: -0.00044189877, z: -0.003817505}
 --- !u!1 &961459927
 GameObject:
   m_ObjectHideFlags: 0
@@ -1557,7 +1604,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 577b661448e2b1b46ba3a6498c65e88b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PlushieSpawner
-  PlushieSingle: {fileID: 87883685673523143, guid: 9e4a6ea7ff084e34199ca7a30e5da4e7, type: 3}
+  PlushieSingle: {fileID: 4303740543820332924, guid: 98c5e14270ce99d44a2474018c2ef6be, type: 3}
   PlushieDuo: {fileID: 2262430051389081891, guid: a36ca70e9b0648647a4fa117e9bea54d, type: 3}
   PlushieTrio: {fileID: 1293603098368256694, guid: aaa33dcab7e55854b839469669640386, type: 3}
   PlushieBig: {fileID: 7600814676510201308, guid: 07d68b5ebb192174199b4f93a9344f91, type: 3}
@@ -2353,7 +2400,7 @@ Camera:
   near clip plane: 0.3
   far clip plane: 1000
   field of view: 60
-  orthographic: 0
+  orthographic: 1
   orthographic size: 5
   m_Depth: 0
   m_CullingMask:
@@ -2379,7 +2426,7 @@ Transform:
   m_GameObject: {fileID: 1263389344}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 14.24, y: 0.58, z: -18.96}
+  m_LocalPosition: {x: 1.49, y: 0.58, z: -18.96}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -2435,7 +2482,7 @@ Rigidbody:
   m_ImplicitCom: 1
   m_ImplicitTensor: 1
   m_UseGravity: 0
-  m_IsKinematic: 1
+  m_IsKinematic: 0
   m_Interpolate: 0
   m_Constraints: 120
   m_CollisionDetection: 2
@@ -2455,11 +2502,15 @@ MonoBehaviour:
   GameOn: 0
   ClawMovePressed: 0
   ClawDownPressed: 0
+  ClawUpPressed: 0
+  ClawGrabPressed: 0
   ClawUsedThisTurn: 0
   ClawDownThisTurn: 0
   ClawUpThisTurn: 0
+  ClawGrabThisTurn: 0
   ClawDownInput: 0
   ClawUpInput: 0
+  ClawGrabInput: 0
   tokens: 3
   ClawButton: {fileID: 41970026}
   ClawDownButton: {fileID: 1199502468}
@@ -2480,27 +2531,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::ClawAnimationScripts
   anim: {fileID: 1407835429}
   clawDownAnimation: 0
---- !u!65 &1407835434
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1407835427}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Size: {x: 2.2910273, y: 0.21183331, z: 2.2553601}
-  m_Center: {x: -0.052930314, y: 4.427264, z: 0.069777966}
 --- !u!1 &1416494655
 GameObject:
   m_ObjectHideFlags: 0
@@ -2530,7 +2560,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 577b661448e2b1b46ba3a6498c65e88b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PlushieSpawner
-  PlushieSingle: {fileID: 87883685673523143, guid: 9e4a6ea7ff084e34199ca7a30e5da4e7, type: 3}
+  PlushieSingle: {fileID: 4303740543820332924, guid: 98c5e14270ce99d44a2474018c2ef6be, type: 3}
   PlushieDuo: {fileID: 2262430051389081891, guid: a36ca70e9b0648647a4fa117e9bea54d, type: 3}
   PlushieTrio: {fileID: 1293603098368256694, guid: aaa33dcab7e55854b839469669640386, type: 3}
   PlushieBig: {fileID: 7600814676510201308, guid: 07d68b5ebb192174199b4f93a9344f91, type: 3}
@@ -2719,7 +2749,7 @@ Rigidbody:
     m_Bits: 0
   m_ImplicitCom: 1
   m_ImplicitTensor: 1
-  m_UseGravity: 1
+  m_UseGravity: 0
   m_IsKinematic: 0
   m_Interpolate: 0
   m_Constraints: 0
@@ -2743,8 +2773,8 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 0.0028081099, y: 0.011998274, z: 0.0038314876}
-  m_Center: {x: 0.00054444076, y: 0.003502438, z: 0.009617882}
+  m_Size: {x: 0.0028081103, y: 0.016264927, z: 0.0038314874}
+  m_Center: {x: 0.000544441, y: 0.0057201707, z: 0.01007046}
 --- !u!65 &1470969319
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -2764,8 +2794,8 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 0.034456003, y: 0.0031327307, z: 0.022214359}
-  m_Center: {x: 0.00052228716, y: -0.0009303936, z: -0.0031351116}
+  m_Size: {x: 0.0032448769, y: 0.0031327305, z: 0.019538818}
+  m_Center: {x: 0.0007533809, y: -0.0011897727, z: -0.0045258077}
 --- !u!1001 &1472401991
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2792,7 +2822,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 97b7313fea753194b837eee5243a5125, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 1.02
+      value: 0.69
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 97b7313fea753194b837eee5243a5125, type: 3}
       propertyPath: m_LocalPosition.z
@@ -2890,9 +2920,6 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 97b7313fea753194b837eee5243a5125, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1407835433}
-    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 97b7313fea753194b837eee5243a5125, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 1407835434}
     - targetCorrespondingSourceObject: {fileID: 9156530754993876758, guid: 97b7313fea753194b837eee5243a5125, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1952988794}
@@ -3693,7 +3720,7 @@ Rigidbody:
     m_Bits: 0
   m_ImplicitCom: 1
   m_ImplicitTensor: 1
-  m_UseGravity: 1
+  m_UseGravity: 0
   m_IsKinematic: 0
   m_Interpolate: 0
   m_Constraints: 0
@@ -3717,8 +3744,8 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 0.0028081187, y: 0.011998284, z: 0.0038199562}
-  m_Center: {x: 0.00054444105, y: 0.0035023661, z: 0.011111805}
+  m_Size: {x: 0.0028081187, y: 0.01789762, z: 0.0038199557}
+  m_Center: {x: 0.00054444117, y: 0.0065687485, z: 0.011737494}
 --- !u!65 &1897510196
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -3738,8 +3765,8 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 0.037572715, y: 0.0034575667, z: 0.02359428}
-  m_Center: {x: 0.00014596069, y: -0.0007679997, z: -0.0024451283}
+  m_Size: {x: 0.0025369434, y: 0.003457567, z: 0.021600002}
+  m_Center: {x: 0.000721521, y: -0.00096135243, z: -0.0034817194}
 --- !u!1 &1946587509
 GameObject:
   m_ObjectHideFlags: 0
@@ -3904,7 +3931,7 @@ Rigidbody:
     m_Bits: 0
   m_ImplicitCom: 1
   m_ImplicitTensor: 1
-  m_UseGravity: 1
+  m_UseGravity: 0
   m_IsKinematic: 0
   m_Interpolate: 0
   m_Constraints: 0
@@ -3928,8 +3955,8 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 0.0028081127, y: 0.011001848, z: 0.0031421017}
-  m_Center: {x: 0.000544441, y: 0.0030037938, z: 0.011144681}
+  m_Size: {x: 0.0028081127, y: 0.014092694, z: 0.0031421012}
+  m_Center: {x: 0.000544441, y: 0.004610307, z: 0.011472501}
 --- !u!65 &1952988796
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -3949,8 +3976,8 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 0.027349558, y: 0.0036869105, z: 0.023459857}
-  m_Center: {x: 0.00017150433, y: -0.00065330666, z: -0.0025124128}
+  m_Size: {x: 0.002653183, y: 0.0036869105, z: 0.022195477}
+  m_Center: {x: 0.0005501298, y: -0.0007757794, z: -0.0031695787}
 --- !u!1 &2000798821
 GameObject:
   m_ObjectHideFlags: 0
@@ -4046,7 +4073,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 577b661448e2b1b46ba3a6498c65e88b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PlushieSpawner
-  PlushieSingle: {fileID: 87883685673523143, guid: 9e4a6ea7ff084e34199ca7a30e5da4e7, type: 3}
+  PlushieSingle: {fileID: 4303740543820332924, guid: 98c5e14270ce99d44a2474018c2ef6be, type: 3}
   PlushieDuo: {fileID: 2262430051389081891, guid: a36ca70e9b0648647a4fa117e9bea54d, type: 3}
   PlushieTrio: {fileID: 1293603098368256694, guid: aaa33dcab7e55854b839469669640386, type: 3}
   PlushieBig: {fileID: 7600814676510201308, guid: 07d68b5ebb192174199b4f93a9344f91, type: 3}
@@ -4332,6 +4359,93 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2045036973}
   m_CullTransparentMesh: 1
+--- !u!1001 &4247520087092341666
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 408189300939885270, guid: 2f5d0b34cedfc4d4a9d753abcc1bb1f5, type: 3}
+      propertyPath: m_Name
+      value: FoxPlushieNew
+      objectReference: {fileID: 0}
+    - target: {fileID: 1072418206097035372, guid: 2f5d0b34cedfc4d4a9d753abcc1bb1f5, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 0.4
+      objectReference: {fileID: 0}
+    - target: {fileID: 1072418206097035372, guid: 2f5d0b34cedfc4d4a9d753abcc1bb1f5, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 0.4
+      objectReference: {fileID: 0}
+    - target: {fileID: 1072418206097035372, guid: 2f5d0b34cedfc4d4a9d753abcc1bb1f5, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 0.4
+      objectReference: {fileID: 0}
+    - target: {fileID: 1072418206097035372, guid: 2f5d0b34cedfc4d4a9d753abcc1bb1f5, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 2.83
+      objectReference: {fileID: 0}
+    - target: {fileID: 1072418206097035372, guid: 2f5d0b34cedfc4d4a9d753abcc1bb1f5, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -2.22
+      objectReference: {fileID: 0}
+    - target: {fileID: 1072418206097035372, guid: 2f5d0b34cedfc4d4a9d753abcc1bb1f5, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1072418206097035372, guid: 2f5d0b34cedfc4d4a9d753abcc1bb1f5, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1072418206097035372, guid: 2f5d0b34cedfc4d4a9d753abcc1bb1f5, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1072418206097035372, guid: 2f5d0b34cedfc4d4a9d753abcc1bb1f5, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1072418206097035372, guid: 2f5d0b34cedfc4d4a9d753abcc1bb1f5, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1072418206097035372, guid: 2f5d0b34cedfc4d4a9d753abcc1bb1f5, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1072418206097035372, guid: 2f5d0b34cedfc4d4a9d753abcc1bb1f5, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1072418206097035372, guid: 2f5d0b34cedfc4d4a9d753abcc1bb1f5, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2053506702669397286, guid: 2f5d0b34cedfc4d4a9d753abcc1bb1f5, type: 3}
+      propertyPath: m_Material
+      value: 
+      objectReference: {fileID: 13400000, guid: 6ac2a80e64bb6cc41baa2117201a6e63, type: 2}
+    - target: {fileID: 3030495673089797702, guid: 2f5d0b34cedfc4d4a9d753abcc1bb1f5, type: 3}
+      propertyPath: m_Mass
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3030495673089797702, guid: 2f5d0b34cedfc4d4a9d753abcc1bb1f5, type: 3}
+      propertyPath: m_Constraints
+      value: 8
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 408189300939885270, guid: 2f5d0b34cedfc4d4a9d753abcc1bb1f5, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 206609725}
+    - targetCorrespondingSourceObject: {fileID: 408189300939885270, guid: 2f5d0b34cedfc4d4a9d753abcc1bb1f5, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 206609724}
+  m_SourcePrefab: {fileID: 100100000, guid: 2f5d0b34cedfc4d4a9d753abcc1bb1f5, type: 3}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
@@ -4346,3 +4460,4 @@ SceneRoots:
   - {fileID: 1263389348}
   - {fileID: 753277140}
   - {fileID: 1206665044}
+  - {fileID: 4247520087092341666}

@@ -10,11 +10,15 @@ public class ClawControl : MonoBehaviour
     public bool GameOn;
     public bool ClawMovePressed;
     public bool ClawDownPressed;
+    public bool ClawUpPressed;
+    public bool ClawGrabPressed;
     public bool ClawUsedThisTurn;
     public bool ClawDownThisTurn;
     public bool ClawUpThisTurn;
+    public bool ClawGrabThisTurn;
     public bool ClawDownInput;
     public bool ClawUpInput;
+    public bool ClawGrabInput;
     public int tokens;
     public MyButton ClawButton;
     public MyButton ClawDownButton;
@@ -40,33 +44,39 @@ public class ClawControl : MonoBehaviour
             ClawMovePressed = true;
             ClawUsedThisTurn = true;
             tokens =- 1;
-            rb.AddRelativeForce(20,0,0);
+            rb.AddRelativeForce(40,0,0);
         }
 
         if (Keyboard.current.sKey.isPressed == true && ClawMovePressed == true  && ClawDownThisTurn == false || ClawDownButton.buttonPressed == true && ClawMovePressed == true && ClawDownThisTurn == false)
         {   
             ClawDownPressed = true;
             ClawDownThisTurn = true;
-            rb.AddRelativeForce(-20,-20,0);
+            rb.AddRelativeForce(-40,-20,0);
             anim.SetTrigger("Action");
         }
 
-        if (Keyboard.current.wKey.isPressed == true && ClawMovePressed == true  && ClawDownThisTurn == true || ClawUpButton.buttonPressed == true && ClawMovePressed == true && ClawDownThisTurn == true)
-        {   
-            ClawUpThisTurn = true;
-            rb.AddRelativeForce(0,30,0);
-        }
+        
 
 
-        if (Keyboard.current.gKey.isPressed == true && ClawMovePressed == true && ClawDownThisTurn == true)
+        if (Keyboard.current.gKey.isPressed == true && ClawMovePressed == true && ClawDownThisTurn == true && ClawGrabThisTurn == false)
         {   
             anim.SetTrigger("Grab");
-            ClawMovePressed = false;
-            ClawDownPressed = false;
-            ClawUsedThisTurn = false;
-            ClawDownThisTurn = false;
-            rb.AddRelativeForce(0,20,0);
+            ClawGrabThisTurn = true;
+            ClawGrabPressed = true;
+            // ClawMovePressed = false;
+            // ClawDownPressed = false;
+            // ClawUsedThisTurn = false;
+            // ClawDownThisTurn = false;
+            rb.linearVelocity = Vector3.zero;
+
         }
+
+        if (Keyboard.current.wKey.isPressed == true && ClawMovePressed == true  && ClawDownThisTurn == true && ClawGrabThisTurn == true && ClawUpThisTurn == false || ClawUpButton.buttonPressed == true && ClawMovePressed == true && ClawDownThisTurn == true && ClawGrabThisTurn == true && ClawUpThisTurn == false)
+        {   
+             ClawUpPressed = true;
+             ClawUpThisTurn = true;
+            rb.AddRelativeForce(0,10,0);
+         }
        }
     
     }
@@ -94,10 +104,11 @@ public class ClawControl : MonoBehaviour
     }
 
     public void ClawMoveUp()
-    {
-        if (ClawUpInput == true && ClawMovePressed == true && ClawDownThisTurn == true)
+     {
+         if (ClawUpInput == true && ClawMovePressed == true && ClawDownThisTurn == true)
         {
-            rb.AddRelativeForce(0,30,0);
+            Debug.Log("Claw Up");
+            rb.AddRelativeForce(0,10,0);
             ClawUpThisTurn = true;  
         }
 
