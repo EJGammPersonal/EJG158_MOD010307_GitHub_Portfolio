@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.InputSystem;
 
 public class ClawHingeScript : MonoBehaviour
 {
@@ -22,6 +23,11 @@ public class ClawHingeScript : MonoBehaviour
 
     void Update()
     {
-        
+        if(Keyboard.current.spaceKey.isPressed == true)
+        {
+                    ClawState(true);
+        }
+        else
+            ClawState(false);
     }
 }
