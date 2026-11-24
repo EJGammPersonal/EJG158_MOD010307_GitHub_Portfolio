@@ -2,13 +2,24 @@ using UnityEngine;
 
 public class ClawHingeScript : MonoBehaviour
 {
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
-    void Start()
+    public HingeJoint[] clawJoints;
+    public float openVelocity = -100f;
+    public float closeVelocity = 100f;
+    public float motorPower = 100f;
+
+    public void ClawState(bool closed)
     {
-        
+        float targetVelocit = closed ? closeVelocity : openVelocity;
+        foreach (var joint in clawJoints)
+        {
+            joint.useMotor = true;
+            JointMotor motor = joint.motor;
+            motor.targetVelocity = targetVelocit;
+            motor.force = motorPower;
+            joint.motor = motor;
+        }
     }
 
-    // Update is called once per frame
     void Update()
     {
         
