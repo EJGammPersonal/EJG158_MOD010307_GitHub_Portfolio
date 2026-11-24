@@ -8,9 +8,9 @@ public class ClawHingeScript : MonoBehaviour
     public float closeVelocity = 100f;
     public float motorPower = 100f;
 
-    public void ClawState(bool closed)
+    public void ClawState(bool closing)
     {
-        float targetVelocit = closed ? closeVelocity : openVelocity;
+        float targetVelocit = closing ? closeVelocity : openVelocity;
         foreach (var joint in clawJoints)
         {
             joint.useMotor = true;
@@ -18,6 +18,7 @@ public class ClawHingeScript : MonoBehaviour
             motor.targetVelocity = targetVelocit;
             motor.force = motorPower;
             joint.motor = motor;
+            Debug.Log("Motor Applied");
         }
     }
 

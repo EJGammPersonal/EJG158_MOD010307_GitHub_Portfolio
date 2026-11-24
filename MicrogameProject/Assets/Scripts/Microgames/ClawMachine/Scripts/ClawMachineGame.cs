@@ -28,7 +28,7 @@ public class ClawMachineGame : MicrogameBehaviour
         {
             base.Begin(session);
             pointsLeft = pointsRemaining;
-            clawControl.GameOn = true;
+            //clawControl.GameOn = true;
             plushieSpawner.GameOn = true;
             UpdateProgress();
             
