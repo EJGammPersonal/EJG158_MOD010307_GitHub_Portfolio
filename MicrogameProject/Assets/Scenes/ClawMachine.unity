@@ -203,7 +203,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1407835436}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: ClawControl, Assembly-CSharp
         m_MethodName: ClawMoving
         m_Mode: 1
@@ -608,7 +608,7 @@ MonoBehaviour:
   LegendaryPlushie: {fileID: 1569284847993538447, guid: 979eef28a4284d84690a4e2c407bf534, type: 3}
   progressText: {fileID: 1946587511}
   pointsRemaining: 5
-  clawControl: {fileID: 1407835436}
+  clawControl: {fileID: 0}
   plushieSpawner: {fileID: 2016499176}
   pointsLeft: 0
 --- !u!1 &206609720 stripped
@@ -1325,8 +1325,8 @@ HingeJoint:
     targetPosition: 0
   m_UseMotor: 1
   m_Motor:
-    targetVelocity: 10
-    force: 10
+    targetVelocity: 0
+    force: 0
     freeSpin: 0
   m_UseLimits: 0
   m_ExtendedLimits: 0
@@ -1839,7 +1839,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1407835436}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: ClawControl, Assembly-CSharp
         m_MethodName: ClawMoveUp
         m_Mode: 1
@@ -2123,7 +2123,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1407835436}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: ClawControl, Assembly-CSharp
         m_MethodName: ClawMoveDown
         m_Mode: 1
@@ -2627,37 +2627,6 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 120
   m_CollisionDetection: 2
---- !u!114 &1407835436
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1407835427}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 94920b4ca575ab14d93d0a8145c47ed4, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::ClawControl
-  ClawActive: 0
-  GameOn: 0
-  ClawMovePressed: 0
-  ClawDownPressed: 0
-  ClawUpPressed: 0
-  ClawGrabPressed: 0
-  ClawUsedThisTurn: 0
-  ClawDownThisTurn: 0
-  ClawUpThisTurn: 0
-  ClawGrabThisTurn: 0
-  ClawDownInput: 1
-  ClawUpInput: 0
-  ClawGrabInput: 0
-  tokens: 0
-  ClawButton: {fileID: 41970026}
-  ClawDownButton: {fileID: 1199502468}
-  ClawUpButton: {fileID: 1142670734}
-  ClawAnimation: {fileID: 1407835437}
-  anim: {fileID: 1407835429}
 --- !u!114 &1407835437
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2672,6 +2641,27 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::ClawAnimationScripts
   anim: {fileID: 1407835429}
   clawDownAnimation: 0
+--- !u!114 &1407835438
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1407835427}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 33a7dfcf66db6f0419a13387ef2c7fbc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::ClawHingeScript
+  clawJoints:
+  - {fileID: 1952988801}
+  - {fileID: 1897510200}
+  - {fileID: 930649571}
+  - {fileID: 1470969323}
+  openVelocity: -100
+  closeVelocity: 100
+  motorPower: 100
+  closing: 0
 --- !u!1 &1416494655
 GameObject:
   m_ObjectHideFlags: 0
@@ -2916,8 +2906,8 @@ HingeJoint:
     targetPosition: 0
   m_UseMotor: 1
   m_Motor:
-    targetVelocity: 10
-    force: 10
+    targetVelocity: 0
+    force: 0
     freeSpin: 0
   m_UseLimits: 0
   m_ExtendedLimits: 0
@@ -3056,6 +3046,18 @@ PrefabInstance:
       propertyPath: 'm_Materials.Array.data[0]'
       value: 
       objectReference: {fileID: 2100000, guid: c1fb01a23a55793468a49cc1da3ab4fd, type: 2}
+    - target: {fileID: -962582140826350219, guid: 97b7313fea753194b837eee5243a5125, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -2.02
+      objectReference: {fileID: 0}
+    - target: {fileID: -962582140826350219, guid: 97b7313fea753194b837eee5243a5125, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 2.35
+      objectReference: {fileID: 0}
+    - target: {fileID: -962582140826350219, guid: 97b7313fea753194b837eee5243a5125, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0.09
+      objectReference: {fileID: 0}
     - target: {fileID: -804731622281664130, guid: 97b7313fea753194b837eee5243a5125, type: 3}
       propertyPath: 'm_Materials.Array.data[0]'
       value: 
@@ -3096,13 +3098,16 @@ PrefabInstance:
       addedObject: {fileID: 1407835430}
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 97b7313fea753194b837eee5243a5125, type: 3}
       insertIndex: -1
-      addedObject: {fileID: 1407835436}
+      addedObject: {fileID: 1407835438}
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 97b7313fea753194b837eee5243a5125, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1407835429}
     - targetCorrespondingSourceObject: {fileID: 9156530754993876758, guid: 97b7313fea753194b837eee5243a5125, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1952988794}
+    - targetCorrespondingSourceObject: {fileID: 9156530754993876758, guid: 97b7313fea753194b837eee5243a5125, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1952988807}
     - targetCorrespondingSourceObject: {fileID: 9156530754993876758, guid: 97b7313fea753194b837eee5243a5125, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1952988801}
@@ -3944,8 +3949,8 @@ HingeJoint:
     targetPosition: 0
   m_UseMotor: 1
   m_Motor:
-    targetVelocity: 10
-    force: 10
+    targetVelocity: 0
+    force: 0
     freeSpin: 0
   m_UseLimits: 0
   m_ExtendedLimits: 0
@@ -4194,8 +4199,8 @@ HingeJoint:
     targetPosition: 0
   m_UseMotor: 1
   m_Motor:
-    targetVelocity: 10
-    force: 10
+    targetVelocity: 0
+    force: 0
     freeSpin: 0
   m_UseLimits: 0
   m_ExtendedLimits: 0
@@ -4254,6 +4259,24 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 0.002808113, y: 0.011998275, z: 0.0026764036}
   m_Center: {x: 0.000544441, y: 0.005271471, z: 0.010433934}
+--- !u!114 &1952988807
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1952988789}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 33a7dfcf66db6f0419a13387ef2c7fbc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::ClawHingeScript
+  clawJoints:
+  - {fileID: 1952988801}
+  openVelocity: -100
+  closeVelocity: 100
+  motorPower: 100
+  closing: 0
 --- !u!1 &2000798821
 GameObject:
   m_ObjectHideFlags: 0
