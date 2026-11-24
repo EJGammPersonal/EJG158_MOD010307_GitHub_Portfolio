@@ -3,6 +3,7 @@ using TMPro;
 using UnityEngine.InputSystem;
 using UnityEngine.UI;
 using Unity.VisualScripting;
+using Unity.Burst.Intrinsics;
 
 public class ClawMachineHinges : MonoBehaviour
 {
@@ -34,12 +35,14 @@ public class ClawMachineHinges : MonoBehaviour
     private HingeJoint hingeFar;
     private HingeJoint hingeLeft;
     private HingeJoint hingieRight;
+    private ConfigurableJoint armJoint;
+    private ConfigurableJoint handJoint;
 
-    public void Awake()
+    private void FixedUpdate()
     {
         
     }
 
-
-
 }
+
+
