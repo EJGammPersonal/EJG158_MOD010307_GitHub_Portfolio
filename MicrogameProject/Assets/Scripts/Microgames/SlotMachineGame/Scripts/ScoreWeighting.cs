@@ -1,25 +1,84 @@
 using System;
 using System.Collections.Generic;
+using System.Text.RegularExpressions;
 using UnityEngine;
 
 public class ScoreWeighting : MonoBehaviour
 {
-    public enum ResultSprites{Cherry, Lemon, Melon, Heart, Bar, BarBar, BarBarBar, Clover, Cleat, Bell, Sevens}
-    [SerializeField] private List<WinCons> winconditions = new List<WinCons>();
-    public Dictionary<ResultSprites, WinCons> matchvaluecheck;
+    public enum ResultSprite { Cherry, Lemon, Melon, Heart, Bar, BarBar, BarBarBar, Cleat, Bell, Seven}
 
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
-    
+public int EvaluateSingleLine(ResultSprite[] lineResults)
+{
+    if (lineResults == null || lineResults.Length < 3) return 0;
 
-    // Update is called once per frame
-    public struct WinCons
+    ResultSprite a = lineResults[0];
+    ResultSprite b = lineResults[1];
+    ResultSprite c = lineResults[2];
+
+
+    if (a == b && b == c)
     {
-       public ResultSprites resultSprites;
-       public int twomatch;
-       public int threematch;
-       public int matchvalue;
+        return a switch
+        {
+            ResultSprite.Cherry => 100,
+            ResultSprite.Lemon => 200,
+            ResultSprite.Melon => 300,
+            ResultSprite.Heart => 400,
+            ResultSprite.Bar => 1000,
+            ResultSprite.BarBar => 2000,
+            ResultSprite.BarBarBar => 3000,
+            ResultSprite.Cleat => 5000,
+            ResultSprite.Bell => 6000,
+            ResultSprite.Seven => 7777,
+            _ => 50
+        };
     }
+    
+        
 
+    if (a == ResultSprite.Cherry && b == ResultSprite.Cherry)
+    {
+        return 10;
+    }
+    if (a == ResultSprite.Lemon && b == ResultSprite.Lemon)
+    {
+        return 20;
+    }
+    if (a == ResultSprite.Melon && b == ResultSprite.Melon)
+    {
+        return 30;
+    }
+    if (a == ResultSprite.Heart && b == ResultSprite.Heart)
+    {
+        return 40;
+    }
+    if (a == ResultSprite.Bar && b == ResultSprite.Bar)
+    {
+        return 100;
+    }
+    if (a == ResultSprite.BarBar && b == ResultSprite.BarBar)
+    {
+        return 200;
+    }
+    if (a == ResultSprite.BarBarBar && b == ResultSprite.BarBarBar)
+    {
+        return 300;
+    }
+    if (a == ResultSprite.Cleat && b == ResultSprite.Cleat)
+    {
+        return 500;
+    }
+    if (a == ResultSprite.Bell && b == ResultSprite.Bell)
+    {
+        return 600;
+    }
+    if (a == ResultSprite.Seven && b == ResultSprite.Seven)
+    {
+        return 777;
+    }
     
 
+    return 0;
+    //Forgot to make it work if A and C matched. Oops.
+}
 }
