@@ -1327,7 +1327,7 @@ HingeJoint:
   m_ExtendedLimits: 0
   m_UseAcceleration: 0
   m_Limits:
-    min: 0
+    min: -40
     max: 90
     bounciness: 0
     bounceMinVelocity: 0.2
@@ -2612,20 +2612,6 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 120
   m_CollisionDetection: 2
---- !u!114 &1407835437
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 919132148346007318}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1a017c96cce329e4cb782c88494c2a0f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::ClawAnimationScripts
-  anim: {fileID: 1407835429}
-  clawDownAnimation: 0
 --- !u!1 &1416494655
 GameObject:
   m_ObjectHideFlags: 0
@@ -2872,7 +2858,7 @@ HingeJoint:
   m_ExtendedLimits: 0
   m_UseAcceleration: 0
   m_Limits:
-    min: 0
+    min: -40
     max: 90
     bounciness: 0
     bounceMinVelocity: 0.2
@@ -3716,7 +3702,7 @@ HingeJoint:
   m_ExtendedLimits: 0
   m_UseAcceleration: 0
   m_Limits:
-    min: 0
+    min: -40
     max: 90
     bounciness: 0
     bounceMinVelocity: 0.2
@@ -3961,7 +3947,7 @@ HingeJoint:
   m_ExtendedLimits: 0
   m_UseAcceleration: 0
   m_Limits:
-    min: 0
+    min: -40
     max: 90
     bounciness: 0
     bounceMinVelocity: 0.2
@@ -4444,9 +4430,9 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 543450652269770156}
-  - component: {fileID: 1407835437}
   - component: {fileID: 1407835430}
   - component: {fileID: 1407835429}
+  - component: {fileID: 919132148346007320}
   - component: {fileID: 919132148346007319}
   m_Layer: 0
   m_Name: ClawMachinePostClose
@@ -4475,6 +4461,37 @@ MonoBehaviour:
   openVelocity: -100
   closeVelocity: 100
   motorPower: 100
+--- !u!114 &919132148346007320
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 919132148346007318}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 94920b4ca575ab14d93d0a8145c47ed4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::ClawControl
+  ClawActive: 0
+  GameOn: 0
+  ClawMovePressed: 0
+  ClawDownPressed: 0
+  ClawUpPressed: 0
+  ClawGrabPressed: 0
+  ClawUsedThisTurn: 0
+  ClawDownThisTurn: 0
+  ClawUpThisTurn: 0
+  ClawGrabThisTurn: 0
+  ClawDownInput: 0
+  ClawUpInput: 0
+  ClawGrabInput: 0
+  tokens: 0
+  ClawButton: {fileID: 41970026}
+  ClawDownButton: {fileID: 1199502468}
+  ClawUpButton: {fileID: 1142670734}
+  ClawAnimation: {fileID: 0}
+  anim: {fileID: 1407835429}
 --- !u!23 &1148134808120332581
 MeshRenderer:
   m_ObjectHideFlags: 0

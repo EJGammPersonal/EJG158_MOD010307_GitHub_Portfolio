@@ -52,7 +52,7 @@ public class ClawControl : MonoBehaviour
             ClawDownPressed = true;
             ClawDownThisTurn = true;
             rb.AddRelativeForce(-40,-20,0);
-            anim.SetTrigger("Action");
+            // anim.SetTrigger("Action");
         }
 
         
@@ -60,7 +60,7 @@ public class ClawControl : MonoBehaviour
 
         if (Keyboard.current.gKey.isPressed == true && ClawMovePressed == true && ClawDownThisTurn == true && ClawGrabThisTurn == false)
         {   
-            anim.SetTrigger("Grab");
+            // anim.SetTrigger("Grab");
             ClawGrabThisTurn = true;
             ClawGrabPressed = true;
             // ClawMovePressed = false;
@@ -97,7 +97,7 @@ public class ClawControl : MonoBehaviour
             Debug.Log("Claw Down");
             rb.AddRelativeForce(-20,-20,0);
             ClawDownThisTurn = true;
-            anim.SetTrigger("Action");
+            // anim.SetTrigger("Action");
             
         }
 
