@@ -5,6 +5,8 @@ using MicrogameCourse.Framework;
 using System;
 using MicrogameCourse.Microgames;
 using System.Collections.Generic;
+using Unity.VisualScripting;
+using UnityEngine.SocialPlatforms.Impl;
 
 public class SlotMachine : MonoBehaviour
 
@@ -12,6 +14,7 @@ public class SlotMachine : MonoBehaviour
 
 {
     public bool GameOn;
+    public ScoreWeighting scoreWeighting;
     public int SlotValue; 
     public int SlotSpinCount;
     public GameObject Cherry;
@@ -77,6 +80,10 @@ public class SlotMachine : MonoBehaviour
             Instantiate(SlotResults[i], slotLocation.position, Quaternion.identity);
             return;
         }
+        if (SlotResults[i] == Cherry)
+            {
+                ScoreWeighting.ResultSprite(Cherry)
+            }
          QualityOffset += weightedChance[i];
        }
 

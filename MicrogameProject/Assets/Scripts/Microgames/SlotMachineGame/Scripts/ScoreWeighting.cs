@@ -7,7 +7,7 @@ public class ScoreWeighting : MonoBehaviour
 {
     public enum ResultSprite { Cherry, Lemon, Melon, Heart, Bar, BarBar, BarBarBar, Cleat, Bell, Seven}
 
-public int EvaluateSingleLine(ResultSprite[] lineResults)
+public int CheckLine(ResultSprite[] lineResults)
 {
     if (lineResults == null || lineResults.Length < 3) return 0;
 
