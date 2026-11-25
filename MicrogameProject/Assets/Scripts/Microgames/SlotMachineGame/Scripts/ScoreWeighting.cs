@@ -1,24 +1,25 @@
+using System;
+using System.Collections.Generic;
 using UnityEngine;
 
 public class ScoreWeighting : MonoBehaviour
 {
-    [SerializeField] GameObject Cherry;
-    [SerializeField] GameObject Lemon;
-    [SerializeField] GameObject Melon;
-    [SerializeField] GameObject Heart;
-    [SerializeField] GameObject Bar;
-    [SerializeField] GameObject BarBar;
-    [SerializeField] GameObject BarBarBar;
-    [SerializeField] GameObject Cleat;
-    [SerializeField] GameObject Bell;
-    [SerializeField] GameObject Clover;
-    [SerializeField] GameObject Sevens;
+    public enum ResultSprites{Cherry, Lemon, Melon, Heart, Bar, BarBar, BarBarBar, Clover, Cleat, Bell, Sevens}
+    [SerializeField] private List<WinCons> winconditions = new List<WinCons>();
+    public Dictionary<ResultSprites, WinCons> matchvaluecheck;
+
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     
 
     // Update is called once per frame
-    public void ()
+    public struct WinCons
     {
-       
+       public ResultSprites resultSprites;
+       public int twomatch;
+       public int threematch;
+       public int matchvalue;
     }
+
+    
+
 }
