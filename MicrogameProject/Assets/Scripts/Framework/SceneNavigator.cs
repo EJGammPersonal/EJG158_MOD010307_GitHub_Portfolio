@@ -7,10 +7,10 @@ namespace MicrogameCourse.Framework
 
     public sealed class SceneNavigator : MonoBehaviour
     {
-        private const string MenuScene = "Main Menu";
-        private const string RCPlaneSchool = "RC Plane School";
-        private const string ClawMachine = "Claw Machine";
-        private const string SlotsMachine = "Slot Machine";
+        private const string MenuScene = "MainMenu";
+        private const string RCPlaneSchool = "RCPlaneSchool";
+        private const string ClawMachine = "ClawMachine";
+        private const string SlotsMachine = "SlotMachine";
         private const string RussianRoulette = "Russian Roulette";
         private bool isLoading;
 

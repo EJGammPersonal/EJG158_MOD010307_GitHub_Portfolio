@@ -8,12 +8,21 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/MainMenu.unity
     guid: 1cd6deaa29b8cac4c9061a16a04567ed
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/PracticeTap.unity
     guid: 8c9cfa26abfee488c85f1582747f6a02
-  - enabled: 0
+  - enabled: 1
     path: Assets/Microgames.unity
     guid: aac67e44697054842b67cfbaaab1bc15
+  - enabled: 1
+    path: Assets/Scenes/RCPlaneSchool.unity
+    guid: 217bdc73effbe1648bd87557efefdb49
+  - enabled: 1
+    path: Assets/Scenes/SlotsMachine.unity
+    guid: 9b86fecf869d1ea4c8916017cb9613ce
+  - enabled: 1
+    path: Assets/Scenes/ClawMachine.unity
+    guid: df296eda66c936847977fcf8cc185fcc
   m_configObjects:
     com.unity.input.settings.actions: {fileID: -944628639613478452, guid: 2bcd2660ca9b64942af0de543d8d7100, type: 3}
   m_UseUCBPForAssetBundles: 0
