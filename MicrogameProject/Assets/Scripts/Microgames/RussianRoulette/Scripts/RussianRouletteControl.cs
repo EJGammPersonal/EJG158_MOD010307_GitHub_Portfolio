@@ -28,7 +28,8 @@ public class RussianRouletteControl : MonoBehaviour
     public int PPoints;
     public int JPoints;
     public bool GameOn;
-
+    public Button Self;
+    public Button Fire;
     public void GameStart()
     {
         GameOn = true;

@@ -1,16 +1,47 @@
+using MicrogameCourse.Framework;
+using TMPro;
+using Unity.VisualScripting;
 using UnityEngine;
+using UnityEngine.UI;
 
-public class RussianRouletteGame : MonoBehaviour
+namespace MicrogameCourse.Microgames
 {
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
-    void Start()
-    {
-        
-    }
 
-    // Update is called once per frame
-    void Update()
-    {
+public class RussianRouletteGame : MicrogameBehaviour
+{
+    [SerializeField] private RectTransform playArea;
+    
+    [SerializeField] private TextMeshProUGUI progressText;
+    public int pointsRemaining = 5;
+    public int pointsLeft;
+
+    public RussianRouletteControl RouletteControl;
+
+    public override void Begin(MicrogameSession session)
+        {
+            base.Begin(session);
+            pointsLeft = pointsRemaining;
+            RouletteControl.GameStart();
+            UpdateProgress();
+            
+        }
+
+    public void tokensLeft()
+        {
+            if (!isRunning) return;
+
+            pointsLeft--;
+            UpdateProgress();
+
+            if (pointsLeft <= 0)
+            Win();
+        }
         
-    }
+    public void UpdateProgress()
+        {
+            
+            progressText.text = $"Points Left: {pointsLeft}";
+        }
+
+}
 }
