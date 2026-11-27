@@ -27,9 +27,11 @@ public class RussianRouletteControl : MonoBehaviour
     public int TurnCount;
     public int PPoints;
     public int JPoints;
+    public bool GameOn;
 
     public void GameStart()
     {
+        GameOn = true;
         state = RevolverState.Loading;
         StartCoroutine(RouletteSetup());
     }
@@ -54,11 +56,13 @@ public class RussianRouletteControl : MonoBehaviour
         if (turnOrder == 1)
         {
             StartCoroutine(JFirst());
+            state = RevolverState.JimothyTurn;
         }
         
         if (turnOrder == 2)
         {
             StartCoroutine(PFirst());
+            state = RevolverState.PlayerTurn;
         }
         yield return new WaitForSeconds(2f);
     }
@@ -123,15 +127,29 @@ public class RussianRouletteControl : MonoBehaviour
             if(TurnCount == BulletChamber)
             {
                 StartCoroutine(PlayerDeath());
+                state = RevolverState.Dead;
             }
             else if(TurnCount != BulletChamber)
             {
                 GameMaster.text = "CLICK! You're safe";
                 StartCoroutine(JimothyTurn());
+                state = RevolverState.JimothyTurn;
             }
         }
     }
     
+    public void ShootJimothy()
+    {
+        if (state == RevolverState.PlayerTurn)
+        {
+            if (PPoints >=1)
+            {
+                StartCoroutine(JimothyDeath());
+            }
+            else return;
+        }
+        
+    }
 
     public void PullJimothy()
     {
@@ -140,11 +158,13 @@ public class RussianRouletteControl : MonoBehaviour
             if(TurnCount == BulletChamber)
             {
                 StartCoroutine(JimothyDeath());
+                state = RevolverState.Victory;
             }
             else if(TurnCount != BulletChamber)
             {
                 GameMaster.text = "CLICK! Your turn...";
                 StartCoroutine(PlayerTurn());
+                state = RevolverState.PlayerTurn;
             }
         }
     }
