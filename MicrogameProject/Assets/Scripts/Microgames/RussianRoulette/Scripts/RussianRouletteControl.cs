@@ -80,11 +80,13 @@ public class RussianRouletteControl : MonoBehaviour
     IEnumerator PlayerTurn()
     {
         yield return new WaitForSeconds(2f);
+        StartCoroutine(JimothyTurn());
     }
 
     IEnumerator JimothyTurn()
     {
         yield return new WaitForSeconds(2f);
+        StartCoroutine(PlayerTurn());
     }
 
 }
