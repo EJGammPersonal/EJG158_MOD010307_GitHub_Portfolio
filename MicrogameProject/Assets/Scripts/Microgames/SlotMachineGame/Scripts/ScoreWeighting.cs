@@ -23,9 +23,11 @@ public class ScoreWeighting : MonoBehaviour
         if (lineResults == null || lineResults.Length < 3)
         {
             ResultScore = 0;
+            Debug.Log("NoScore");
         }
         else
         {
+            Debug.Log("SetUpValid");
             ResultSprite a = lineResults[0];
             ResultSprite b = lineResults[1];
             ResultSprite c = lineResults[2];
@@ -69,15 +71,12 @@ public class ScoreWeighting : MonoBehaviour
                 };
                 Debug.Log("Pairs");
             }
-            else
-            {
-                ResultScore = 0;
-            }
         }
 
-        Scoretext.text = "Score" + ResultScore;
-        
-
         return ResultScore;
+    }
+    public void ScoreUpdate()
+    {
+         Scoretext.text = "Score: " + ResultScore;
     }
 }

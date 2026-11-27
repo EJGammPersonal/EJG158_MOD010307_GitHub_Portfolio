@@ -2484,6 +2484,7 @@ MonoBehaviour:
   SlotMachine: {fileID: 1918352799}
   SlotMachine2: {fileID: 1467717039}
   SlotMachine3: {fileID: 265595990}
+  scoreWeighting: {fileID: 1581736636}
 --- !u!1001 &3823826895364858373
 PrefabInstance:
   m_ObjectHideFlags: 0
