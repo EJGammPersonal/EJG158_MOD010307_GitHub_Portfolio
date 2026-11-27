@@ -31,6 +31,7 @@ public class SlotMachine : MonoBehaviour
     public GameObject SlotCylinder;
     public bool Switch = false;
     public Transform slotLocation;
+    private GameObject currentResult;
     
     [SerializeField] private GameObject[] SlotSprites;
     List<GameObject> SlotResults = new List<GameObject>();
@@ -75,11 +76,7 @@ public class SlotMachine : MonoBehaviour
 
        for (int i = 0; i < weightedChance.Length; i++)
        {
-        if (SlotValue <= weightedChance[i] + QualityOffset)
-        {
-            Instantiate(SlotResults[i], slotLocation.position, Quaternion.identity);
-            return;
-        }
+    
          if (SlotResults[i] == Cherry)
             {
                 scoreWeighting.a = ScoreWeighting.ResultSprite.Cherry;
@@ -112,6 +109,10 @@ public class SlotMachine : MonoBehaviour
             {
                 scoreWeighting.a = ScoreWeighting.ResultSprite.Cleat;
             }
+        if (SlotResults[i] == Clover)
+            {
+                scoreWeighting.a = ScoreWeighting.ResultSprite.Clover;
+            }
         if (SlotResults[i] == Bell)
             {
                 scoreWeighting.a = ScoreWeighting.ResultSprite.Bell;
@@ -120,10 +121,21 @@ public class SlotMachine : MonoBehaviour
             {
                 scoreWeighting.a = ScoreWeighting.ResultSprite.Sevens;
             }
+        if (SlotValue <= weightedChance[i] + QualityOffset)
+        {
+            currentResult = Instantiate(SlotResults[i], slotLocation.position, Quaternion.identity);
+            return;
+        }
          QualityOffset += weightedChance[i];
          
        }
 
     }
-   
+    public void Reset()
+    {
+        Switch = false;
+        SlotCylinder.SetActive(true);
+        Destroy(currentResult);
+    }
+
 }

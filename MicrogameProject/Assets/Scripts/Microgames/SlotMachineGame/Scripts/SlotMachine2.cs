@@ -5,6 +5,8 @@ using MicrogameCourse.Framework;
 using System;
 using MicrogameCourse.Microgames;
 using System.Collections.Generic;
+using Unity.VisualScripting;
+using UnityEngine.SocialPlatforms.Impl;
 
 public class SlotMachine2 : MonoBehaviour
 
@@ -12,6 +14,7 @@ public class SlotMachine2 : MonoBehaviour
 
 {
     public bool GameOn;
+    public ScoreWeighting scoreWeighting;
     public int SlotValue; 
     public int SlotSpinCount;
     public GameObject Cherry;
@@ -25,9 +28,10 @@ public class SlotMachine2 : MonoBehaviour
     public GameObject Bell;
     public GameObject Clover;
     public GameObject Sevens;
+    public GameObject SlotCylinder;
     public bool Switch = false;
     public Transform slotLocation;
-    public GameObject SlotCylinder2;
+    private GameObject currentResult;
     
     [SerializeField] private GameObject[] SlotSprites;
     List<GameObject> SlotResults = new List<GameObject>();
@@ -63,23 +67,75 @@ public class SlotMachine2 : MonoBehaviour
         }
         
     }
-    public void ShowResults()
+     public void ShowResults()
 
     {
-        SlotCylinder2.SetActive(false);
+        SlotCylinder.SetActive(false);
         int QualityOffset = 0;
         SlotValue = UnityEngine.Random.Range(1, 100); 
 
        for (int i = 0; i < weightedChance.Length; i++)
        {
+        
+         if (SlotResults[i] == Cherry)
+            {
+                scoreWeighting.b = ScoreWeighting.ResultSprite.Cherry;
+            }
+        if (SlotResults[i] == Melon)
+            {
+                scoreWeighting.b = ScoreWeighting.ResultSprite.Melon;
+            }
+        if (SlotResults[i] == Lemon)
+            {
+                scoreWeighting.b = ScoreWeighting.ResultSprite.Lemon;
+            }
+        if (SlotResults[i] == Heart)
+            {
+                scoreWeighting.b = ScoreWeighting.ResultSprite.Heart;
+            }
+        if (SlotResults[i] == Bar)
+            {
+                scoreWeighting.b = ScoreWeighting.ResultSprite.Bar;
+            }
+        if (SlotResults[i] == BarBar)
+            {
+                scoreWeighting.b = ScoreWeighting.ResultSprite.BarBar;
+            }
+        if (SlotResults[i] == BarBarBar)
+            {
+                scoreWeighting.b = ScoreWeighting.ResultSprite.BarBarBar;
+            }
+        if (SlotResults[i] == Cleat)
+            {
+                scoreWeighting.b = ScoreWeighting.ResultSprite.Cleat;
+            }
+        if (SlotResults[i] == Clover)
+            {
+                scoreWeighting.b = ScoreWeighting.ResultSprite.Clover;
+            }
+        if (SlotResults[i] == Bell)
+            {
+                scoreWeighting.a = ScoreWeighting.ResultSprite.Bell;
+            }
+        if (SlotResults[i] == Sevens)
+            {
+                scoreWeighting.b = ScoreWeighting.ResultSprite.Sevens;
+            }
         if (SlotValue <= weightedChance[i] + QualityOffset)
         {
-            Instantiate(SlotResults[i], slotLocation.position, Quaternion.identity);
+           currentResult = Instantiate(SlotResults[i], slotLocation.position, Quaternion.identity);
             return;
         }
          QualityOffset += weightedChance[i];
+         
        }
 
+    }
+   public void Reset()
+    {
+        Switch = false;
+        SlotCylinder.SetActive(true);
+        Destroy(currentResult);
     }
    
 }

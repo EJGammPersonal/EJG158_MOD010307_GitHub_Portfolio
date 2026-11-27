@@ -420,6 +420,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::SlotMachine3
   GameOn: 0
+  scoreWeighting: {fileID: 1581736636}
   SlotValue: 0
   SlotSpinCount: 0
   Cherry: {fileID: 5593139540855034073, guid: edcedde63fa65584fad61b128fea3cee, type: 3}
@@ -433,9 +434,9 @@ MonoBehaviour:
   Bell: {fileID: 1105107847348828848, guid: 2dcb98893cf0fa74085eed1db1f4ce8a, type: 3}
   Clover: {fileID: 5601789443508201696, guid: 5dba047e7b3146242a45d260e6e25479, type: 3}
   Sevens: {fileID: 5328053369396768521, guid: e6efd5d1e9f0b9646bf596121dffe688, type: 3}
+  SlotCylinder: {fileID: 1429559995}
   Switch: 0
   slotLocation: {fileID: 230588017}
-  SlotCylinder3: {fileID: 1429559995}
   SlotSprites: []
   weightedChance: 0f0000000f0000000f0000000f0000000f0000000a0000000500000005000000020000000200000001000000
 --- !u!1001 &350962170
@@ -810,7 +811,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -34, y: 506.00024}
+  m_AnchoredPosition: {x: -59, y: 298}
   m_SizeDelta: {x: 200, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &908703889
@@ -870,7 +871,7 @@ MonoBehaviour:
   m_fontSizeMax: 72
   m_fontStyle: 0
   m_HorizontalAlignment: 2
-  m_VerticalAlignment: 256
+  m_VerticalAlignment: 512
   m_textAlignment: 65535
   m_characterSpacing: 0
   m_characterHorizontalScale: 1
@@ -901,7 +902,7 @@ MonoBehaviour:
   m_VertexBufferAutoSizeReduction: 0
   m_useMaxVisibleDescender: 1
   m_pageToDisplay: 1
-  m_margin: {x: 0, y: -48.700317, z: -98.36096, w: 0}
+  m_margin: {x: -182.75095, y: -48.700317, z: -265.05664, w: 0}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   m_hasFontAssetChanged: 0
@@ -1719,6 +1720,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::SlotMachine2
   GameOn: 0
+  scoreWeighting: {fileID: 1581736636}
   SlotValue: 0
   SlotSpinCount: 0
   Cherry: {fileID: 5593139540855034073, guid: edcedde63fa65584fad61b128fea3cee, type: 3}
@@ -1732,9 +1734,9 @@ MonoBehaviour:
   Bell: {fileID: 1105107847348828848, guid: 2dcb98893cf0fa74085eed1db1f4ce8a, type: 3}
   Clover: {fileID: 5601789443508201696, guid: 5dba047e7b3146242a45d260e6e25479, type: 3}
   Sevens: {fileID: 5328053369396768521, guid: e6efd5d1e9f0b9646bf596121dffe688, type: 3}
+  SlotCylinder: {fileID: 504354007}
   Switch: 0
   slotLocation: {fileID: 1481323751}
-  SlotCylinder2: {fileID: 504354007}
   SlotSprites: []
   weightedChance: 0f0000000f0000000f0000000f0000000f0000000a0000000500000005000000020000000200000001000000
 --- !u!1 &1481323750
@@ -1777,8 +1779,9 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1581736635}
+  - component: {fileID: 1581736636}
   m_Layer: 0
-  m_Name: GameObject
+  m_Name: ScoreWeighting
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1793,12 +1796,29 @@ Transform:
   m_GameObject: {fileID: 1581736634}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -15263.205, y: -0.00004, z: 46858.797}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1581736636
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1581736634}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e2cc4e7d044edff4d9f36a5af9bc899c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::ScoreWeighting
+  a: 0
+  b: 0
+  c: 0
+  Scoretext: {fileID: 908703889}
+  ResultScore: 0
 --- !u!1 &1607281103
 GameObject:
   m_ObjectHideFlags: 0
@@ -2150,6 +2170,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::SlotMachine
   GameOn: 0
+  scoreWeighting: {fileID: 1581736636}
   SlotValue: 0
   SlotSpinCount: 0
   Cherry: {fileID: 5593139540855034073, guid: edcedde63fa65584fad61b128fea3cee, type: 3}

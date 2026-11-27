@@ -32,5 +32,14 @@ public class SwitchDown : MonoBehaviour
             SlotMachine3.SwitchUsed();
             PulledSwitch = true;
         }
+
+        if (Keyboard.current.rKey.isPressed == true && PulledSwitch == true)
+        {
+            PulledSwitch = false;
+            SlotMachine.Reset();
+            SlotMachine2.Reset();
+            SlotMachine3.Reset();
+        }
     }
+    
 }
