@@ -20,6 +20,11 @@ public class RussianRouletteControl : MonoBehaviour
     public CoinControl coinControl;
     public int turnOrder;
     public int JimAI;
+    public bool PSpun;
+    public bool JSpun;
+    public bool PShotJim;
+    public bool JShotPlayer;
+    public int TurnCount;
 
     public void GameStart()
     {
@@ -61,6 +66,7 @@ public class RussianRouletteControl : MonoBehaviour
         GameMaster.text = "Lucky you... It chose Blue...";
         GameMaster.text = "The Barrel Spins, The Game Begins";
         BulletChamber = Random.Range(1, 6);
+        TurnCount += 1;
         yield return new WaitForSeconds(2f);
 
         StartCoroutine(JimothyTurn());
@@ -71,6 +77,7 @@ public class RussianRouletteControl : MonoBehaviour
         GameMaster.text = "Your luck's dead! Coin chose red!";
         GameMaster.text = "The Barrel Spins, The Game Begins";
         BulletChamber = Random.Range(1, 6);
+        TurnCount += 1;
         yield return new WaitForSeconds(2f);
 
         StartCoroutine(PlayerTurn());
@@ -79,12 +86,14 @@ public class RussianRouletteControl : MonoBehaviour
 
     IEnumerator PlayerTurn()
     {
+        TurnCount += 1;
         yield return new WaitForSeconds(2f);
         StartCoroutine(JimothyTurn());
     }
 
     IEnumerator JimothyTurn()
     {
+        TurnCount += 1;
         yield return new WaitForSeconds(2f);
         StartCoroutine(PlayerTurn());
     }
