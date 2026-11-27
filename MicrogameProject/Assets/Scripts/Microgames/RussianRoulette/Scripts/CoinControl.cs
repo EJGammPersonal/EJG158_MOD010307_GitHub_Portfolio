@@ -12,11 +12,13 @@ public class CoinControl : MonoBehaviour
         if (CoinResult == 1)
         {
             Coin.GetComponent<Renderer>().material.color = new Color(255, 0, 0);
+            russianRouletteControl.turnOrder = 1;
             russianRouletteControl.state = RevolverState.JFirst;
         }
         if (CoinResult == 2)
         {
             Coin.GetComponent<Renderer>().material.color = new Color(0, 255, 0);
+            russianRouletteControl.turnOrder = 2;
             russianRouletteControl.state = RevolverState.PFirst;
         }
 
