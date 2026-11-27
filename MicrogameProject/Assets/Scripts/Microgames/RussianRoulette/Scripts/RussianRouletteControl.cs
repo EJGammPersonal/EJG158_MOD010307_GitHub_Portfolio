@@ -25,6 +25,8 @@ public class RussianRouletteControl : MonoBehaviour
     public bool PShotJim;
     public bool JShotPlayer;
     public int TurnCount;
+    public int PPoints;
+    public int JPoints;
 
     public void GameStart()
     {
@@ -98,6 +100,53 @@ public class RussianRouletteControl : MonoBehaviour
         yield return new WaitForSeconds(2f);
         state = RevolverState.PlayerTurn;
         StartCoroutine(PlayerTurn());
+    }
+
+    IEnumerator PlayerDeath()
+    {
+        yield return new WaitForSeconds(2f);
+    }
+
+    IEnumerator JimothyDeath()
+    {
+        yield return new WaitForSeconds(2f);
+    }
+
+    public void PullSelf()
+    {
+        if (state != RevolverState.PlayerTurn)
+        {
+            GameMaster.text = "It's not your turn, Patience...";
+        }
+        else if (state == RevolverState.PlayerTurn)
+        {
+            if(TurnCount == BulletChamber)
+            {
+                StartCoroutine(PlayerDeath());
+            }
+            else if(TurnCount != BulletChamber)
+            {
+                GameMaster.text = "CLICK! You're safe";
+                StartCoroutine(JimothyTurn());
+            }
+        }
+    }
+    
+
+    public void PullJimothy()
+    {
+        if (state == RevolverState.JimothyTurn)
+        {
+            if(TurnCount == BulletChamber)
+            {
+                StartCoroutine(JimothyDeath());
+            }
+            else if(TurnCount != BulletChamber)
+            {
+                GameMaster.text = "CLICK! Your turn...";
+                StartCoroutine(PlayerTurn());
+            }
+        }
     }
 
 }
