@@ -80,11 +80,48 @@ public class SlotMachine : MonoBehaviour
             Instantiate(SlotResults[i], slotLocation.position, Quaternion.identity);
             return;
         }
-        // if (SlotResults[i] == Cherry)
-        //     {
-        //         ScoreWeighting.lineResults[0](Cherry);
-        //     }
+         if (SlotResults[i] == Cherry)
+            {
+                scoreWeighting.a = ScoreWeighting.ResultSprite.Cherry;
+            }
+        if (SlotResults[i] == Melon)
+            {
+                scoreWeighting.a = ScoreWeighting.ResultSprite.Melon;
+            }
+        if (SlotResults[i] == Lemon)
+            {
+                scoreWeighting.a = ScoreWeighting.ResultSprite.Lemon;
+            }
+        if (SlotResults[i] == Heart)
+            {
+                scoreWeighting.a = ScoreWeighting.ResultSprite.Heart;
+            }
+        if (SlotResults[i] == Bar)
+            {
+                scoreWeighting.a = ScoreWeighting.ResultSprite.Bar;
+            }
+        if (SlotResults[i] == BarBar)
+            {
+                scoreWeighting.a = ScoreWeighting.ResultSprite.BarBar;
+            }
+        if (SlotResults[i] == BarBarBar)
+            {
+                scoreWeighting.a = ScoreWeighting.ResultSprite.BarBarBar;
+            }
+        if (SlotResults[i] == Cleat)
+            {
+                scoreWeighting.a = ScoreWeighting.ResultSprite.Cleat;
+            }
+        if (SlotResults[i] == Bell)
+            {
+                scoreWeighting.a = ScoreWeighting.ResultSprite.Bell;
+            }
+        if (SlotResults[i] == Sevens)
+            {
+                scoreWeighting.a = ScoreWeighting.ResultSprite.Sevens;
+            }
          QualityOffset += weightedChance[i];
+         
        }
 
     }

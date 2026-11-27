@@ -12,5 +12,5 @@ public class RussianRouletteControl : MonoBehaviour
     public GameObject Jimothy;
     public GameObject bullet;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
-    
+    public Text GameMaster;
 }

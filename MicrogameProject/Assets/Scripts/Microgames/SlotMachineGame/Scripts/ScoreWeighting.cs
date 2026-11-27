@@ -5,9 +5,12 @@ using UnityEngine;
 
 public class ScoreWeighting : MonoBehaviour
 {
-    public enum ResultSprite { Cherry, Lemon, Melon, Heart, Bar, BarBar, BarBarBar, Cleat, Bell, Seven}
+    public enum ResultSprite { Cherry, Lemon, Melon, Heart, Bar, BarBar, BarBarBar, Cleat, Bell, Sevens}
 
-public int CheckLine(ResultSprite[] lineResults)
+    public ResultSprite a;
+    public ResultSprite b;
+    public ResultSprite c;
+    public int CheckLine(ResultSprite[] lineResults)
 {
     if (lineResults == null || lineResults.Length < 3) return 0;
 
@@ -29,7 +32,7 @@ public int CheckLine(ResultSprite[] lineResults)
             ResultSprite.BarBarBar => 3000,
             ResultSprite.Cleat => 5000,
             ResultSprite.Bell => 6000,
-            ResultSprite.Seven => 7777,
+            ResultSprite.Sevens => 7777,
             _ => 50
         };
     }
@@ -72,7 +75,7 @@ public int CheckLine(ResultSprite[] lineResults)
     {
         return 600;
     }
-    if (a == ResultSprite.Seven && b == ResultSprite.Seven)
+    if (a == ResultSprite.Sevens && b == ResultSprite.Sevens)
     {
         return 777;
     }
