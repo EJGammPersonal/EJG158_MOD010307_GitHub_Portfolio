@@ -68,7 +68,7 @@ public class RussianRouletteControl : MonoBehaviour
         BulletChamber = Random.Range(1, 6);
         TurnCount += 1;
         yield return new WaitForSeconds(2f);
-
+        state = RevolverState.JimothyTurn;
         StartCoroutine(JimothyTurn());
     }
 
@@ -79,7 +79,7 @@ public class RussianRouletteControl : MonoBehaviour
         BulletChamber = Random.Range(1, 6);
         TurnCount += 1;
         yield return new WaitForSeconds(2f);
-
+        state = RevolverState.PlayerTurn;
         StartCoroutine(PlayerTurn());
 
     }
@@ -88,6 +88,7 @@ public class RussianRouletteControl : MonoBehaviour
     {
         TurnCount += 1;
         yield return new WaitForSeconds(2f);
+        state = RevolverState.JimothyTurn;
         StartCoroutine(JimothyTurn());
     }
 
@@ -95,6 +96,7 @@ public class RussianRouletteControl : MonoBehaviour
     {
         TurnCount += 1;
         yield return new WaitForSeconds(2f);
+        state = RevolverState.PlayerTurn;
         StartCoroutine(PlayerTurn());
     }
 
