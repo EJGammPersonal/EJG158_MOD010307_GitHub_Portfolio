@@ -80,10 +80,10 @@ public class SlotMachine : MonoBehaviour
             Instantiate(SlotResults[i], slotLocation.position, Quaternion.identity);
             return;
         }
-        if (SlotResults[i] == Cherry)
-            {
-                ScoreWeighting.ResultSprite(Cherry)
-            }
+        // if (SlotResults[i] == Cherry)
+        //     {
+        //         ScoreWeighting.lineResults[0](Cherry);
+        //     }
          QualityOffset += weightedChance[i];
        }
 
