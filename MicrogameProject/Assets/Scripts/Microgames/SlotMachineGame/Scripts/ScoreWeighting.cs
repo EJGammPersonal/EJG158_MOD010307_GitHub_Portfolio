@@ -2,6 +2,7 @@ using System;
 using System.Collections.Generic;
 using System.Text.RegularExpressions;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class ScoreWeighting : MonoBehaviour
 {
@@ -10,6 +11,7 @@ public class ScoreWeighting : MonoBehaviour
     public ResultSprite a;
     public ResultSprite b;
     public ResultSprite c;
+    public Text Scoretext;
     public int CheckLine(ResultSprite[] lineResults)
 {
     if (lineResults == null || lineResults.Length < 3) return 0;
