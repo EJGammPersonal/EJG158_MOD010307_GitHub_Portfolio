@@ -54,6 +54,9 @@ public class RussianRouletteControl : MonoBehaviour
 
     IEnumerator Waiting()
     {
+    
+        yield return new WaitUntil(() => turnOrder == 1 || turnOrder == 2);
+
         if (turnOrder == 1)
         {
             StartCoroutine(JFirst());
